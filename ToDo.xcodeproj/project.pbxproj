@@ -55,6 +55,8 @@
 		BB1078CA200512850088CE2F /* APIMethod+Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1078C9200512850088CE2F /* APIMethod+Icons.swift */; };
 		BB1078CC2005128E0088CE2F /* APIMethod+Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1078CB2005128E0088CE2F /* APIMethod+Lists.swift */; };
 		BB1078CE200512C10088CE2F /* APIMethod+APIMethod+Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1078CD200512C10088CE2F /* APIMethod+APIMethod+Items.swift */; };
+		BB1078D120051CD40088CE2F /* Synchronization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB1078D020051CD40088CE2F /* Synchronization.storyboard */; };
+		BB45E2F520051FFA0050144B /* SynchronizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB45E2F420051FFA0050144B /* SynchronizationViewController.swift */; };
 		BB840EFA2001781000B57E83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB840EF92001781000B57E83 /* AppDelegate.swift */; };
 		BB840F012001781000B57E83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB840F002001781000B57E83 /* Assets.xcassets */; };
 		BB840F042001781000B57E83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB840F022001781000B57E83 /* LaunchScreen.storyboard */; };
@@ -111,6 +113,8 @@
 		BB1078C9200512850088CE2F /* APIMethod+Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIMethod+Icons.swift"; sourceTree = "<group>"; };
 		BB1078CB2005128E0088CE2F /* APIMethod+Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIMethod+Lists.swift"; sourceTree = "<group>"; };
 		BB1078CD200512C10088CE2F /* APIMethod+APIMethod+Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIMethod+APIMethod+Items.swift"; sourceTree = "<group>"; };
+		BB1078D020051CD40088CE2F /* Synchronization.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Synchronization.storyboard; sourceTree = "<group>"; };
+		BB45E2F420051FFA0050144B /* SynchronizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronizationViewController.swift; sourceTree = "<group>"; };
 		BB840EF62001781000B57E83 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB840EF92001781000B57E83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB840F002001781000B57E83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -281,6 +285,15 @@
 			path = Items;
 			sourceTree = "<group>";
 		};
+		BB1078CF20051CA80088CE2F /* Synchronization */ = {
+			isa = PBXGroup;
+			children = (
+				BB1078D020051CD40088CE2F /* Synchronization.storyboard */,
+				BB45E2F420051FFA0050144B /* SynchronizationViewController.swift */,
+			);
+			path = Synchronization;
+			sourceTree = "<group>";
+		};
 		BB840EED2001781000B57E83 = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				BBE632C82003EC8E00DBE28F /* LaunchScreen */,
+				BB1078CF20051CA80088CE2F /* Synchronization */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -448,6 +462,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB1078D120051CD40088CE2F /* Synchronization.storyboard in Resources */,
 				BB840F042001781000B57E83 /* LaunchScreen.storyboard in Resources */,
 				BB840F012001781000B57E83 /* Assets.xcassets in Resources */,
 			);
@@ -551,6 +566,7 @@
 				BB1078C020050F9B0088CE2F /* APIModelItems+EditResponseModel.swift in Sources */,
 				BB1078722004E2A20088CE2F /* APIModel+ErrorModel.swift in Sources */,
 				BB1078CE200512C10088CE2F /* APIMethod+APIMethod+Items.swift in Sources */,
+				BB45E2F520051FFA0050144B /* SynchronizationViewController.swift in Sources */,
 				BB840EFA2001781000B57E83 /* AppDelegate.swift in Sources */,
 				BB10786F2004E27C0088CE2F /* API+ResponseModel.swift in Sources */,
 				BB1078612004DF020088CE2F /* API+Argument.swift in Sources */,
