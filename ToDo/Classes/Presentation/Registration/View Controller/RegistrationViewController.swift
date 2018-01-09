@@ -1,5 +1,5 @@
 //
-//  SynchronizationViewController.swift
+//  RegistrationViewController.swift
 //  ToDo
 //
 //  Created by Илья Халяпин on 09.01.2018.
@@ -8,4 +8,4 @@
 
 import UIKit
 
-final class SynchronizationViewController: UIViewController { }
+final class RegistrationViewController: UIViewController { }

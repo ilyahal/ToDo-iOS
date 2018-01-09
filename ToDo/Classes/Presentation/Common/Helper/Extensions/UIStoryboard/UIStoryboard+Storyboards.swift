@@ -15,8 +15,12 @@ extension UIStoryboard {
         
         /// Прочее
         case other = "Other"
-        /// Синхронизация
-        case synchronization = "Synchronization"
+        /// Старт
+        case start = "Start"
+        /// Регистрация
+        case registration = "Registration"
+        /// Списки
+        case lists = "Lists"
         
     }
     
