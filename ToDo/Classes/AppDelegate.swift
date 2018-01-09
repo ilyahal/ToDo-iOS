@@ -19,7 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - UIApplicationDelegate
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        /// Настройка StatusBar
         application.statusBarStyle = .lightContent
+        
+        /// Инициализация сервисов
+        let _ = ServiceLayer.instance
         
         return true
     }

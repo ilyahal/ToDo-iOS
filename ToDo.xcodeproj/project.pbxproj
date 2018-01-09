@@ -60,6 +60,18 @@
 		BB840EFA2001781000B57E83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB840EF92001781000B57E83 /* AppDelegate.swift */; };
 		BB840F012001781000B57E83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB840F002001781000B57E83 /* Assets.xcassets */; };
 		BB840F042001781000B57E83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB840F022001781000B57E83 /* LaunchScreen.storyboard */; };
+		BB8B93FA2005287D00E3DF6E /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B93F92005287D00E3DF6E /* ServiceLayer.swift */; };
+		BB8B93FC2005289900E3DF6E /* ApplicationSettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B93FB2005289900E3DF6E /* ApplicationSettingsService.swift */; };
+		BB8B93FF200535CF00E3DF6E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B93FE200535CF00E3DF6E /* APIService.swift */; };
+		BB8B9401200535DD00E3DF6E /* APIService+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B9400200535DD00E3DF6E /* APIService+Error.swift */; };
+		BB8B940420053EF500E3DF6E /* AccountRegistrationRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B940320053EF500E3DF6E /* AccountRegistrationRequestModel.swift */; };
+		BB8B940620053F9F00E3DF6E /* AccountLoginRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B940520053F9F00E3DF6E /* AccountLoginRequestModel.swift */; };
+		BB8B94082005422E00E3DF6E /* ListsCreateRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B94072005422E00E3DF6E /* ListsCreateRequestModel.swift */; };
+		BB8B940A2005435C00E3DF6E /* ListsEditRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B94092005435C00E3DF6E /* ListsEditRequestModel.swift */; };
+		BB8B940C2005441600E3DF6E /* ListsDeleteRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B940B2005441600E3DF6E /* ListsDeleteRequestModel.swift */; };
+		BB8B940E200544CD00E3DF6E /* ItemsCreateRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B940D200544CD00E3DF6E /* ItemsCreateRequestModel.swift */; };
+		BB8B9410200544DE00E3DF6E /* ItemsEditRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B940F200544DE00E3DF6E /* ItemsEditRequestModel.swift */; };
+		BB8B9412200544EF00E3DF6E /* ItemsDeleteRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B9411200544EF00E3DF6E /* ItemsDeleteRequestModel.swift */; };
 		BBE632CC2003ED4600DBE28F /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE632CB2003ED4600DBE28F /* APIConstants.swift */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +132,18 @@
 		BB840F002001781000B57E83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB840F032001781000B57E83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB840F052001781000B57E83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB8B93F92005287D00E3DF6E /* ServiceLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
+		BB8B93FB2005289900E3DF6E /* ApplicationSettingsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationSettingsService.swift; sourceTree = "<group>"; };
+		BB8B93FE200535CF00E3DF6E /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		BB8B9400200535DD00E3DF6E /* APIService+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIService+Error.swift"; sourceTree = "<group>"; };
+		BB8B940320053EF500E3DF6E /* AccountRegistrationRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRegistrationRequestModel.swift; sourceTree = "<group>"; };
+		BB8B940520053F9F00E3DF6E /* AccountLoginRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountLoginRequestModel.swift; sourceTree = "<group>"; };
+		BB8B94072005422E00E3DF6E /* ListsCreateRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsCreateRequestModel.swift; sourceTree = "<group>"; };
+		BB8B94092005435C00E3DF6E /* ListsEditRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsEditRequestModel.swift; sourceTree = "<group>"; };
+		BB8B940B2005441600E3DF6E /* ListsDeleteRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsDeleteRequestModel.swift; sourceTree = "<group>"; };
+		BB8B940D200544CD00E3DF6E /* ItemsCreateRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCreateRequestModel.swift; sourceTree = "<group>"; };
+		BB8B940F200544DE00E3DF6E /* ItemsEditRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsEditRequestModel.swift; sourceTree = "<group>"; };
+		BB8B9411200544EF00E3DF6E /* ItemsDeleteRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsDeleteRequestModel.swift; sourceTree = "<group>"; };
 		BBE632CB2003ED4600DBE28F /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		CE2311CB392A48B6B27604F9 /* Pods-ToDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToDo/Pods-ToDo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -322,6 +346,40 @@
 			path = ToDo;
 			sourceTree = "<group>";
 		};
+		BB8B93F82005286F00E3DF6E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B93FB2005289900E3DF6E /* ApplicationSettingsService.swift */,
+				BB8B93FD200535BA00E3DF6E /* APIService */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		BB8B93FD200535BA00E3DF6E /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B93FE200535CF00E3DF6E /* APIService.swift */,
+				BB8B9400200535DD00E3DF6E /* APIService+Error.swift */,
+				BB8B940220053EC600E3DF6E /* Model */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		BB8B940220053EC600E3DF6E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B940320053EF500E3DF6E /* AccountRegistrationRequestModel.swift */,
+				BB8B940520053F9F00E3DF6E /* AccountLoginRequestModel.swift */,
+				BB8B94072005422E00E3DF6E /* ListsCreateRequestModel.swift */,
+				BB8B94092005435C00E3DF6E /* ListsEditRequestModel.swift */,
+				BB8B940B2005441600E3DF6E /* ListsDeleteRequestModel.swift */,
+				BB8B940D200544CD00E3DF6E /* ItemsCreateRequestModel.swift */,
+				BB8B940F200544DE00E3DF6E /* ItemsEditRequestModel.swift */,
+				BB8B9411200544EF00E3DF6E /* ItemsDeleteRequestModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BBE632C42003EBEC00DBE28F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +430,8 @@
 			children = (
 				BBE632CB2003ED4600DBE28F /* APIConstants.swift */,
 				BBE632CD2003ED7800DBE28F /* API Cover */,
+				BB8B93F82005286F00E3DF6E /* Service */,
+				BB8B93F92005287D00E3DF6E /* ServiceLayer.swift */,
 			);
 			path = "Business Logic";
 			sourceTree = "<group>";
@@ -536,23 +596,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB10787C2004E3FE0088CE2F /* API+Model.swift in Sources */,
+				BB8B9401200535DD00E3DF6E /* APIService+Error.swift in Sources */,
 				BB1078C42005107E0088CE2F /* API+Method.swift in Sources */,
 				BB1078B820050AAA0088CE2F /* APIModelLists+DeleteRequestModel.swift in Sources */,
 				BB1078CA200512850088CE2F /* APIMethod+Icons.swift in Sources */,
+				BB8B9410200544DE00E3DF6E /* ItemsEditRequestModel.swift in Sources */,
 				BB1078A6200506C30088CE2F /* APIModelLists+ListResponseModel.swift in Sources */,
+				BB8B940420053EF500E3DF6E /* AccountRegistrationRequestModel.swift in Sources */,
 				BB1078BA20050C520088CE2F /* APIModelItems+CreateRequestModel.swift in Sources */,
 				BB1078A02004FDAC0088CE2F /* APIModel+ItemModel.swift in Sources */,
 				BB1078A8200507080088CE2F /* APIModelItems+ListResponseModel.swift in Sources */,
 				BB10787F2004F5720088CE2F /* APIModelAccount+RegistrationRequestModel.swift in Sources */,
 				BB1078912004F9660088CE2F /* Color.swift in Sources */,
 				BB1078962004FA770088CE2F /* APIModelIcons+ListResponseModel.swift in Sources */,
+				BB8B940A2005435C00E3DF6E /* ListsEditRequestModel.swift in Sources */,
 				BB10788F2004F8610088CE2F /* APIModel+ColorModel.swift in Sources */,
 				BB1078C82005127D0088CE2F /* APIMethod+Colors.swift in Sources */,
 				BB1078A22004FF5E0088CE2F /* Item.swift in Sources */,
 				BB10785F2004DED30088CE2F /* API+Helper.swift in Sources */,
+				BB8B940C2005441600E3DF6E /* ListsDeleteRequestModel.swift in Sources */,
 				BBE632CC2003ED4600DBE28F /* APIConstants.swift in Sources */,
+				BB8B9412200544EF00E3DF6E /* ItemsDeleteRequestModel.swift in Sources */,
+				BB8B940E200544CD00E3DF6E /* ItemsCreateRequestModel.swift in Sources */,
 				BB1078B0200508B70088CE2F /* APIModelLists+CreateRequestModel.swift in Sources */,
 				BB1078C2200510180088CE2F /* APIModelItems+DeleteRequestModel.swift in Sources */,
+				BB8B93FC2005289900E3DF6E /* ApplicationSettingsService.swift in Sources */,
 				BB1078BC20050DDA0088CE2F /* APIModelItems+CreateResponseModel.swift in Sources */,
 				BB1078782004E36A0088CE2F /* String+IsEmptyOrWhitespace.swift in Sources */,
 				BB1078C6200512740088CE2F /* APIMethod+Account.swift in Sources */,
@@ -572,13 +640,17 @@
 				BB840EFA2001781000B57E83 /* AppDelegate.swift in Sources */,
 				BB10786F2004E27C0088CE2F /* API+ResponseModel.swift in Sources */,
 				BB1078612004DF020088CE2F /* API+Argument.swift in Sources */,
+				BB8B93FA2005287D00E3DF6E /* ServiceLayer.swift in Sources */,
 				BB1078632004E0A00088CE2F /* API+Error.swift in Sources */,
 				BB1078762004E35E0088CE2F /* String+Empty.swift in Sources */,
 				BB1078BE20050E9B0088CE2F /* APIModelItems+EditRequestModel.swift in Sources */,
 				BB1078652004E1C90088CE2F /* API+ErrorHandling.swift in Sources */,
+				BB8B94082005422E00E3DF6E /* ListsCreateRequestModel.swift in Sources */,
 				BB1078B2200509240088CE2F /* APIModelLists+CreateResponseModel.swift in Sources */,
 				BB10789A2004FB840088CE2F /* Icon.swift in Sources */,
 				BB10789E2004FCF40088CE2F /* List.swift in Sources */,
+				BB8B93FF200535CF00E3DF6E /* APIService.swift in Sources */,
+				BB8B940620053F9F00E3DF6E /* AccountLoginRequestModel.swift in Sources */,
 				BB1078932004F9A30088CE2F /* Entity.swift in Sources */,
 				BB10787A2004E3A50088CE2F /* String+IsValidEmail.swift in Sources */,
 				BB1078812004F61C0088CE2F /* APIModelAccount+LoginRequestModel.swift in Sources */,
