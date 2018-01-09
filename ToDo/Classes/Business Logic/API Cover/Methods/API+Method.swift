@@ -233,7 +233,7 @@ private extension API.Method {
      - parameter completionHandler: Замыкание, выполняемое после завершения запроса
      */
     static func generateRequest(url: URLConvertible, parameters: Parameters? = nil, headers: HTTPHeaders, completionHandler: @escaping (DataResponse<Any>) -> Void) -> Request {
-        let request = self.sessionManager.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).validate().responseJSON(completionHandler: completionHandler)
+        let request = self.sessionManager.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).validate().responseJSON(queue: .global(qos: .userInitiated), completionHandler: completionHandler)
         return request
     }
     
@@ -245,7 +245,7 @@ private extension API.Method {
      - parameter completionHandler: Замыкание, выполняемое после завершения запроса
      */
     static func generateRequest(url: URLConvertible, parameters: Parameters? = nil, headers: HTTPHeaders, completionHandler: @escaping (DefaultDataResponse) -> Void) -> Request {
-        let request = self.sessionManager.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).validate().response(completionHandler: completionHandler)
+        let request = self.sessionManager.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).validate().response(queue: .global(qos: .userInitiated), completionHandler: completionHandler)
         return request
     }
     

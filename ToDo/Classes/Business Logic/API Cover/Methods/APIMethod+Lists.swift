@@ -24,7 +24,7 @@ extension API.Method.Lists {
     
     /// Изменение списка
     @discardableResult
-    static func publicList(requestData data: API.Model.Lists.EditRequestModel, appId: String, token: String, completionHandler completion: @escaping (_ data: () throws -> API.Model.Lists.EditResponseModel) -> Void) -> Request {
+    static func edit(requestData data: API.Model.Lists.EditRequestModel, appId: String, token: String, completionHandler completion: @escaping (_ data: () throws -> API.Model.Lists.EditResponseModel) -> Void) -> Request {
         return API.Method.requestBuilder(resource: .listsEdit, requestData: data, appId: appId, token: token, completionHandler: completion)
     }
     
