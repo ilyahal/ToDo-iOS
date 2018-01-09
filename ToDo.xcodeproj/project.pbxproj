@@ -92,6 +92,8 @@
 		BB8B944920054C4900E3DF6E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B944820054C4900E3DF6E /* LoadingView.swift */; };
 		BB8B944B20054C5000E3DF6E /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB8B944A20054C5000E3DF6E /* LoadingView.xib */; };
 		BB8B944E20054D8B00E3DF6E /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B944D20054D8B00E3DF6E /* Control.swift */; };
+		BB8B9451200554E100E3DF6E /* UIImage+ImageWithColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B9450200554E100E3DF6E /* UIImage+ImageWithColor.swift */; };
+		BB8B9453200554FB00E3DF6E /* CGSize+Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B9452200554FB00E3DF6E /* CGSize+Initialization.swift */; };
 		BBE632CC2003ED4600DBE28F /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE632CB2003ED4600DBE28F /* APIConstants.swift */; };
 /* End PBXBuildFile section */
 
@@ -184,6 +186,8 @@
 		BB8B944820054C4900E3DF6E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		BB8B944A20054C5000E3DF6E /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		BB8B944D20054D8B00E3DF6E /* Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
+		BB8B9450200554E100E3DF6E /* UIImage+ImageWithColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ImageWithColor.swift"; sourceTree = "<group>"; };
+		BB8B9452200554FB00E3DF6E /* CGSize+Initialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Initialization.swift"; sourceTree = "<group>"; };
 		BBE632CB2003ED4600DBE28F /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		CE2311CB392A48B6B27604F9 /* Pods-ToDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToDo/Pods-ToDo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -452,6 +456,7 @@
 		BB8B941E2005484900E3DF6E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BB8B944F200554CB00E3DF6E /* CGSize */,
 				BB8B941F2005489B00E3DF6E /* NSLayoutConstraint */,
 				BB8B9422200548EB00E3DF6E /* UIImage */,
 				BB8B94252005492000E3DF6E /* UIWindow */,
@@ -475,6 +480,7 @@
 		BB8B9422200548EB00E3DF6E /* UIImage */ = {
 			isa = PBXGroup;
 			children = (
+				BB8B9450200554E100E3DF6E /* UIImage+ImageWithColor.swift */,
 				BB8B9423200548F400E3DF6E /* UIImage+MaskWithColor.swift */,
 			);
 			path = UIImage;
@@ -581,6 +587,14 @@
 				BB8B944D20054D8B00E3DF6E /* Control.swift */,
 			);
 			path = "Custom Control";
+			sourceTree = "<group>";
+		};
+		BB8B944F200554CB00E3DF6E /* CGSize */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B9452200554FB00E3DF6E /* CGSize+Initialization.swift */,
+			);
+			path = CGSize;
 			sourceTree = "<group>";
 		};
 		BBE632C42003EBEC00DBE28F /* Classes */ = {
@@ -807,6 +821,7 @@
 				BB1078CA200512850088CE2F /* APIMethod+Icons.swift in Sources */,
 				BB8B942C2005497B00E3DF6E /* UIStoryboard+ConvenientAccess.swift in Sources */,
 				BB8B9410200544DE00E3DF6E /* ItemsEditRequestModel.swift in Sources */,
+				BB8B9453200554FB00E3DF6E /* CGSize+Initialization.swift in Sources */,
 				BB1078A6200506C30088CE2F /* APIModelLists+ListResponseModel.swift in Sources */,
 				BB8B940420053EF500E3DF6E /* AccountRegistrationRequestModel.swift in Sources */,
 				BB1078BA20050C520088CE2F /* APIModelItems+CreateRequestModel.swift in Sources */,
@@ -879,6 +894,7 @@
 				BB1078812004F61C0088CE2F /* APIModelAccount+LoginRequestModel.swift in Sources */,
 				BB10788A2004F7460088CE2F /* LoginInfo.swift in Sources */,
 				BB10789C2004FBF00088CE2F /* APIModel+ListModel.swift in Sources */,
+				BB8B9451200554E100E3DF6E /* UIImage+ImageWithColor.swift in Sources */,
 				BB8B943D20054B4400E3DF6E /* StackWidthLabel.swift in Sources */,
 				BB1078982004FAD70088CE2F /* APIModel+IconModel.swift in Sources */,
 			);
