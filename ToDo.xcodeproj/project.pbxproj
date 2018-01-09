@@ -94,6 +94,17 @@
 		BB8B944E20054D8B00E3DF6E /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B944D20054D8B00E3DF6E /* Control.swift */; };
 		BB8B9451200554E100E3DF6E /* UIImage+ImageWithColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B9450200554E100E3DF6E /* UIImage+ImageWithColor.swift */; };
 		BB8B9453200554FB00E3DF6E /* CGSize+Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B9452200554FB00E3DF6E /* CGSize+Initialization.swift */; };
+		BB8B94562005558800E3DF6E /* Other.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8B94552005558800E3DF6E /* Other.storyboard */; };
+		BB8B9459200555C900E3DF6E /* OtherRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B9458200555C900E3DF6E /* OtherRouter.swift */; };
+		BB8B945C200555E400E3DF6E /* HUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B945B200555E400E3DF6E /* HUDViewController.swift */; };
+		BB8B94622005575B00E3DF6E /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B94612005575B00E3DF6E /* ModalViewController.swift */; };
+		BB8B9467200557A800E3DF6E /* HUDContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B9466200557A800E3DF6E /* HUDContentView.swift */; };
+		BB8B9469200557BD00E3DF6E /* HUDLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B9468200557BD00E3DF6E /* HUDLoadingView.swift */; };
+		BB8B946B200557D600E3DF6E /* HUDSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B946A200557D600E3DF6E /* HUDSuccessView.swift */; };
+		BB8B946D200557EC00E3DF6E /* HUDFailureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B946C200557EC00E3DF6E /* HUDFailureView.swift */; };
+		BB8B94702005583000E3DF6E /* HUDContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B946F2005583000E3DF6E /* HUDContentType.swift */; };
+		BB8B94722005586700E3DF6E /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B94712005586700E3DF6E /* ModalView.swift */; };
+		BB8B9475200558A900E3DF6E /* CALayer+Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B9474200558A900E3DF6E /* CALayer+Center.swift */; };
 		BBE632CC2003ED4600DBE28F /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE632CB2003ED4600DBE28F /* APIConstants.swift */; };
 /* End PBXBuildFile section */
 
@@ -188,6 +199,17 @@
 		BB8B944D20054D8B00E3DF6E /* Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
 		BB8B9450200554E100E3DF6E /* UIImage+ImageWithColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ImageWithColor.swift"; sourceTree = "<group>"; };
 		BB8B9452200554FB00E3DF6E /* CGSize+Initialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Initialization.swift"; sourceTree = "<group>"; };
+		BB8B94552005558800E3DF6E /* Other.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Other.storyboard; sourceTree = "<group>"; };
+		BB8B9458200555C900E3DF6E /* OtherRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherRouter.swift; sourceTree = "<group>"; };
+		BB8B945B200555E400E3DF6E /* HUDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDViewController.swift; sourceTree = "<group>"; };
+		BB8B94612005575B00E3DF6E /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		BB8B9466200557A800E3DF6E /* HUDContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDContentView.swift; sourceTree = "<group>"; };
+		BB8B9468200557BD00E3DF6E /* HUDLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDLoadingView.swift; sourceTree = "<group>"; };
+		BB8B946A200557D600E3DF6E /* HUDSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDSuccessView.swift; sourceTree = "<group>"; };
+		BB8B946C200557EC00E3DF6E /* HUDFailureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDFailureView.swift; sourceTree = "<group>"; };
+		BB8B946F2005583000E3DF6E /* HUDContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDContentType.swift; sourceTree = "<group>"; };
+		BB8B94712005586700E3DF6E /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		BB8B9474200558A900E3DF6E /* CALayer+Center.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Center.swift"; sourceTree = "<group>"; };
 		BBE632CB2003ED4600DBE28F /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		CE2311CB392A48B6B27604F9 /* Pods-ToDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToDo/Pods-ToDo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -285,6 +307,7 @@
 		BB1078862004F70D0088CE2F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BB8B946E2005582300E3DF6E /* Enum */,
 				BB1078872004F71E0088CE2F /* Data */,
 				BB1078882004F72E0088CE2F /* Other */,
 			);
@@ -429,6 +452,7 @@
 			children = (
 				BB8B9414200547B100E3DF6E /* Helper */,
 				BB8B943A20054B2800E3DF6E /* View */,
+				BB8B945D2005564200E3DF6E /* View Controller */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -457,6 +481,7 @@
 			isa = PBXGroup;
 			children = (
 				BB8B944F200554CB00E3DF6E /* CGSize */,
+				BB8B94732005589800E3DF6E /* CALayer */,
 				BB8B941F2005489B00E3DF6E /* NSLayoutConstraint */,
 				BB8B9422200548EB00E3DF6E /* UIImage */,
 				BB8B94252005492000E3DF6E /* UIWindow */,
@@ -559,6 +584,7 @@
 			isa = PBXGroup;
 			children = (
 				BB8B944220054BD200E3DF6E /* LoadingView */,
+				BB8B94712005586700E3DF6E /* ModalView.swift */,
 			);
 			path = "Custom View";
 			sourceTree = "<group>";
@@ -597,6 +623,92 @@
 			path = CGSize;
 			sourceTree = "<group>";
 		};
+		BB8B94542005557300E3DF6E /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B94552005558800E3DF6E /* Other.storyboard */,
+				BB8B9457200555B600E3DF6E /* Router */,
+				BB8B94632005578A00E3DF6E /* View */,
+				BB8B945A200555D500E3DF6E /* View Controller */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		BB8B9457200555B600E3DF6E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B9458200555C900E3DF6E /* OtherRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		BB8B945A200555D500E3DF6E /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B945B200555E400E3DF6E /* HUDViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		BB8B945D2005564200E3DF6E /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B94602005575000E3DF6E /* Custom View Controller */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		BB8B94602005575000E3DF6E /* Custom View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B94612005575B00E3DF6E /* ModalViewController.swift */,
+			);
+			path = "Custom View Controller";
+			sourceTree = "<group>";
+		};
+		BB8B94632005578A00E3DF6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B94642005579400E3DF6E /* Custom View */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BB8B94642005579400E3DF6E /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B9465200557A000E3DF6E /* HUDContentView */,
+			);
+			path = "Custom View";
+			sourceTree = "<group>";
+		};
+		BB8B9465200557A000E3DF6E /* HUDContentView */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B9466200557A800E3DF6E /* HUDContentView.swift */,
+				BB8B9468200557BD00E3DF6E /* HUDLoadingView.swift */,
+				BB8B946A200557D600E3DF6E /* HUDSuccessView.swift */,
+				BB8B946C200557EC00E3DF6E /* HUDFailureView.swift */,
+			);
+			path = HUDContentView;
+			sourceTree = "<group>";
+		};
+		BB8B946E2005582300E3DF6E /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B946F2005583000E3DF6E /* HUDContentType.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		BB8B94732005589800E3DF6E /* CALayer */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B9474200558A900E3DF6E /* CALayer+Center.swift */,
+			);
+			path = CALayer;
+			sourceTree = "<group>";
+		};
 		BBE632C42003EBEC00DBE28F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -630,6 +742,7 @@
 			children = (
 				BB8B9413200547A100E3DF6E /* Common */,
 				BBE632C82003EC8E00DBE28F /* LaunchScreen */,
+				BB8B94542005557300E3DF6E /* Other */,
 				BB1078CF20051CA80088CE2F /* Synchronization */,
 			);
 			path = Presentation;
@@ -741,6 +854,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB1078D120051CD40088CE2F /* Synchronization.storyboard in Resources */,
+				BB8B94562005558800E3DF6E /* Other.storyboard in Resources */,
 				BB8B944B20054C5000E3DF6E /* LoadingView.xib in Resources */,
 				BB840F042001781000B57E83 /* LaunchScreen.storyboard in Resources */,
 				BB840F012001781000B57E83 /* Assets.xcassets in Resources */,
@@ -823,6 +937,7 @@
 				BB8B9410200544DE00E3DF6E /* ItemsEditRequestModel.swift in Sources */,
 				BB8B9453200554FB00E3DF6E /* CGSize+Initialization.swift in Sources */,
 				BB1078A6200506C30088CE2F /* APIModelLists+ListResponseModel.swift in Sources */,
+				BB8B9469200557BD00E3DF6E /* HUDLoadingView.swift in Sources */,
 				BB8B940420053EF500E3DF6E /* AccountRegistrationRequestModel.swift in Sources */,
 				BB1078BA20050C520088CE2F /* APIModelItems+CreateRequestModel.swift in Sources */,
 				BB1078A02004FDAC0088CE2F /* APIModel+ItemModel.swift in Sources */,
@@ -831,11 +946,14 @@
 				BB8B941D2005481000E3DF6E /* Router.swift in Sources */,
 				BB8B942F200549A900E3DF6E /* UIViewController+StoryboardIdentifiable.swift in Sources */,
 				BB1078912004F9660088CE2F /* Color.swift in Sources */,
+				BB8B94702005583000E3DF6E /* HUDContentType.swift in Sources */,
 				BB1078962004FA770088CE2F /* APIModelIcons+ListResponseModel.swift in Sources */,
 				BB8B9419200547E400E3DF6E /* StoryboardIdentifiable.swift in Sources */,
 				BB8B9431200549EC00E3DF6E /* UIViewController+HideKeyboardWhenTappedAround.swift in Sources */,
 				BB8B9421200548A900E3DF6E /* NSLayoutConstraint+Description.swift in Sources */,
 				BB8B944720054C1100E3DF6E /* UIView+LayoutAttachAll.swift in Sources */,
+				BB8B946B200557D600E3DF6E /* HUDSuccessView.swift in Sources */,
+				BB8B94622005575B00E3DF6E /* ModalViewController.swift in Sources */,
 				BB8B943920054A8700E3DF6E /* ImageAssets.swift in Sources */,
 				BB8B940A2005435C00E3DF6E /* ListsEditRequestModel.swift in Sources */,
 				BB10788F2004F8610088CE2F /* APIModel+ColorModel.swift in Sources */,
@@ -849,6 +967,7 @@
 				BB8B940E200544CD00E3DF6E /* ItemsCreateRequestModel.swift in Sources */,
 				BB8B944E20054D8B00E3DF6E /* Control.swift in Sources */,
 				BB8B942A2005495A00E3DF6E /* UIStoryboard+Storyboards.swift in Sources */,
+				BB8B9459200555C900E3DF6E /* OtherRouter.swift in Sources */,
 				BB1078B0200508B70088CE2F /* APIModelLists+CreateRequestModel.swift in Sources */,
 				BB1078C2200510180088CE2F /* APIModelItems+DeleteRequestModel.swift in Sources */,
 				BB8B93FC2005289900E3DF6E /* ApplicationSettingsService.swift in Sources */,
@@ -863,6 +982,7 @@
 				BB8B944020054B9B00E3DF6E /* ColoredImageView.swift in Sources */,
 				BB1078B4200509AD0088CE2F /* APIModelLists+EditRequestModel.swift in Sources */,
 				BB1078852004F6CE0088CE2F /* APIModel+LoginInfoModel.swift in Sources */,
+				BB8B946D200557EC00E3DF6E /* HUDFailureView.swift in Sources */,
 				BB1078672004E1EF0088CE2F /* API+Resource.swift in Sources */,
 				BB10785D2004DE9B0088CE2F /* API.swift in Sources */,
 				BB1078C020050F9B0088CE2F /* APIModelItems+EditResponseModel.swift in Sources */,
@@ -871,6 +991,7 @@
 				BB45E2F520051FFA0050144B /* SynchronizationViewController.swift in Sources */,
 				BB8B944920054C4900E3DF6E /* LoadingView.swift in Sources */,
 				BB8B943720054A6200E3DF6E /* UITableViewCell+CellIdentifiable.swift in Sources */,
+				BB8B9475200558A900E3DF6E /* CALayer+Center.swift in Sources */,
 				BB840EFA2001781000B57E83 /* AppDelegate.swift in Sources */,
 				BB10786F2004E27C0088CE2F /* API+ResponseModel.swift in Sources */,
 				BB8B9424200548F400E3DF6E /* UIImage+MaskWithColor.swift in Sources */,
@@ -890,8 +1011,11 @@
 				BB8B943420054A2100E3DF6E /* UINavigationController+Pop.swift in Sources */,
 				BB8B94272005493400E3DF6E /* UIWindow+TransitToViewController.swift in Sources */,
 				BB1078932004F9A30088CE2F /* Entity.swift in Sources */,
+				BB8B9467200557A800E3DF6E /* HUDContentView.swift in Sources */,
 				BB10787A2004E3A50088CE2F /* String+IsValidEmail.swift in Sources */,
 				BB1078812004F61C0088CE2F /* APIModelAccount+LoginRequestModel.swift in Sources */,
+				BB8B945C200555E400E3DF6E /* HUDViewController.swift in Sources */,
+				BB8B94722005586700E3DF6E /* ModalView.swift in Sources */,
 				BB10788A2004F7460088CE2F /* LoginInfo.swift in Sources */,
 				BB10789C2004FBF00088CE2F /* APIModel+ListModel.swift in Sources */,
 				BB8B9451200554E100E3DF6E /* UIImage+ImageWithColor.swift in Sources */,

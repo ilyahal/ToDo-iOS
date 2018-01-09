@@ -13,6 +13,8 @@ extension UIStoryboard {
     /// Файлы story
     enum Storyboard: String {
         
+        /// Прочее
+        case other = "Other"
         /// Синхронизация
         case synchronization = "Synchronization"
         
