@@ -24,7 +24,7 @@ extension API.Method.Account {
     
     /// Выход из приложения
     @discardableResult
-    static func logout(appId: String, token: String, completionHandler completion: @escaping (_ data: API.Method.VoidResponse) -> Void) -> Request {
+    static func logout(appId: Int, token: String, completionHandler completion: @escaping (_ data: API.Method.VoidResponse) -> Void) -> Request {
         return API.Method.requestBuilder(resource: .accountLogout, appId: appId, token: token, completionHandler: completion)
     }
     

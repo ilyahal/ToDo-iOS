@@ -16,7 +16,7 @@ extension API.Model {
         // MARK: - Публичные свойства
         
         /// Уникальный идентификатор экземпляра приложения
-        let appId: String
+        let appId: Int
         /// Токен
         let token: String
         
@@ -28,7 +28,7 @@ extension API.Model {
          - parameter json: JSON с необходимыми данными
          */
         init?(json: JSON) {
-            guard let appId = json[.appId].string else { return nil }
+            guard let appId = json[.appId].int else { return nil }
             self.appId = appId
             guard let token = json[.token].string else { return nil }
             self.token = token

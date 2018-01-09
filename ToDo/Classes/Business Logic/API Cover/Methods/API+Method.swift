@@ -64,7 +64,7 @@ extension API.Method {
      - parameter appSecret: Токен
      - parameter completionHandler: Замыкание, выполняемое после завершения запроса
      */
-    static func requestBuilder<ResponseType : API.ResponseModel>(resource: API.Resource, requestData data: API.RequestModel? = nil, appId: String? = nil, token: String? = nil, completionHandler completion: @escaping (_ data: () throws -> ResponseType) -> Void) -> Request {
+    static func requestBuilder<ResponseType : API.ResponseModel>(resource: API.Resource, requestData data: API.RequestModel? = nil, appId: Int? = nil, token: String? = nil, completionHandler completion: @escaping (_ data: () throws -> ResponseType) -> Void) -> Request {
         let url = generateURL(for: resource, with: data)
         print("URL:\n\(url)")
         
@@ -106,8 +106,8 @@ extension API.Method {
                 completion { throw API.Error.unknown(error: error) }
             case .failure(let error):
                 var message: String? = nil
-                if let value = response.result.value {
-                    let json = JSON(value)
+                if let data = response.data {
+                    let json = JSON(data)
                     if let error = API.Model.ErrorModel(json: json) {
                         message = error.message
                     }
@@ -130,7 +130,7 @@ extension API.Method {
      - parameter appSecret: Токен
      - parameter completionHandler: Замыкание, выполняемое после завершения запроса
      */
-    static func requestBuilder(resource: API.Resource, requestData data: API.RequestModel? = nil, appId: String? = nil, token: String? = nil, completionHandler completion: @escaping (_ data: VoidResponse) -> Void) -> Request {
+    static func requestBuilder(resource: API.Resource, requestData data: API.RequestModel? = nil, appId: Int? = nil, token: String? = nil, completionHandler completion: @escaping (_ data: VoidResponse) -> Void) -> Request {
         let url = generateURL(for: resource, with: data)
         print("URL:\n\(url)")
         
@@ -204,7 +204,7 @@ private extension API.Method {
     }
     
     /// Получить заголовки запроса
-    static func generateHeaders(contentType: String? = "application/json; charset=utf-8", accept: String? = "application/json", appId: String?, token: String?) -> HTTPHeaders {
+    static func generateHeaders(contentType: String? = "application/json; charset=utf-8", accept: String? = "application/json", appId: Int?, token: String?) -> HTTPHeaders {
         var headers: [String : String] = [:]
         if let contentType = contentType {
             headers["Content-Type"] = contentType
@@ -216,7 +216,7 @@ private extension API.Method {
             headers["Accept-Language"] = locale
         }
         if let appId = appId {
-            headers["X-Auth-AppId"] = appId
+            headers["X-Auth-AppId"] = "\(appId)"
         }
         if let token = token {
             headers["X-Auth-Token"] = token

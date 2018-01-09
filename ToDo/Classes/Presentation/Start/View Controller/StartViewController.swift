@@ -34,7 +34,7 @@ extension StartViewController {
         if self.applicationSettingsService.isLogined {
             self.router.makeRootLists()
         } else {
-            self.router.makeRootRegistration()
+            self.router.makeRootLogin()
         }
     }
     

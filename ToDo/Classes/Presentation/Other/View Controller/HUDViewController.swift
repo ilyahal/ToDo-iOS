@@ -85,7 +85,7 @@ private extension HUDViewController {
     func setupLoading() -> HUDContentView {
         let loadingView = HUDLoadingView(frame: .zero)
         loadingView.translatesAutoresizingMaskIntoConstraints = false
-        loadingView.color = #colorLiteral(red: 0, green: 0.7222121358, blue: 0.9383115172, alpha: 1)
+        loadingView.color = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         
         self.modalView.addSubview(loadingView)
         
@@ -102,7 +102,7 @@ private extension HUDViewController {
     func setupSuccess() -> HUDContentView {
         let successView = HUDSuccessView(frame: .zero)
         successView.translatesAutoresizingMaskIntoConstraints = false
-        successView.color = #colorLiteral(red: 0, green: 0.7222121358, blue: 0.9383115172, alpha: 1)
+        successView.color = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         
         self.modalView.addSubview(successView)
         
@@ -121,7 +121,7 @@ private extension HUDViewController {
     func setupFailure() -> HUDContentView {
         let failureView = HUDFailureView(frame: .zero)
         failureView.translatesAutoresizingMaskIntoConstraints = false
-        failureView.color = #colorLiteral(red: 0, green: 0.7222121358, blue: 0.9383115172, alpha: 1)
+        failureView.color = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         
         self.modalView.addSubview(failureView)
         

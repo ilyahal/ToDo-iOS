@@ -112,6 +112,10 @@
 		BB8B94872005657A00E3DF6E /* Lists.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8B94862005657A00E3DF6E /* Lists.storyboard */; };
 		BB8B948A2005659500E3DF6E /* ListsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B94892005659500E3DF6E /* ListsRouter.swift */; };
 		BB8B948D2005664700E3DF6E /* ListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B948C2005664700E3DF6E /* ListsViewController.swift */; };
+		BB8F8D682005710F004B364E /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8F8D672005710F004B364E /* RoundedTextField.swift */; };
+		BB8F8D6A20057512004B364E /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8F8D6920057512004B364E /* RoundedButton.swift */; };
+		BB8F8D6D2005795C004B364E /* ClearNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8F8D6C2005795C004B364E /* ClearNavigationController.swift */; };
+		BBB5AD622005824C00C99E86 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5AD612005824C00C99E86 /* LoginViewController.swift */; };
 		BBE632CC2003ED4600DBE28F /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE632CB2003ED4600DBE28F /* APIConstants.swift */; };
 /* End PBXBuildFile section */
 
@@ -224,6 +228,10 @@
 		BB8B94862005657A00E3DF6E /* Lists.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lists.storyboard; sourceTree = "<group>"; };
 		BB8B94892005659500E3DF6E /* ListsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsRouter.swift; sourceTree = "<group>"; };
 		BB8B948C2005664700E3DF6E /* ListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewController.swift; sourceTree = "<group>"; };
+		BB8F8D672005710F004B364E /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		BB8F8D6920057512004B364E /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		BB8F8D6C2005795C004B364E /* ClearNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearNavigationController.swift; sourceTree = "<group>"; };
+		BBB5AD612005824C00C99E86 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BBE632CB2003ED4600DBE28F /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		CE2311CB392A48B6B27604F9 /* Pods-ToDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToDo/Pods-ToDo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -668,6 +676,7 @@
 		BB8B945D2005564200E3DF6E /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BB8F8D6B20057931004B364E /* UINavigationController */,
 				BB8B94602005575000E3DF6E /* Custom View Controller */,
 			);
 			path = "View Controller";
@@ -745,6 +754,7 @@
 			children = (
 				BB8B947D2005639F00E3DF6E /* Registration.storyboard */,
 				BB8B947F200563B100E3DF6E /* Router */,
+				BB8F8D65200570DB004B364E /* View */,
 				BB8B9480200563B800E3DF6E /* View Controller */,
 			);
 			path = Registration;
@@ -761,6 +771,7 @@
 		BB8B9480200563B800E3DF6E /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BBB5AD612005824C00C99E86 /* LoginViewController.swift */,
 				BB8B94832005640C00E3DF6E /* RegistrationViewController.swift */,
 			);
 			path = "View Controller";
@@ -790,6 +801,23 @@
 				BB8B948C2005664700E3DF6E /* ListsViewController.swift */,
 			);
 			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		BB8F8D65200570DB004B364E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BB8F8D672005710F004B364E /* RoundedTextField.swift */,
+				BB8F8D6920057512004B364E /* RoundedButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BB8F8D6B20057931004B364E /* UINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				BB8F8D6C2005795C004B364E /* ClearNavigationController.swift */,
+			);
+			path = UINavigationController;
 			sourceTree = "<group>";
 		};
 		BBE632C42003EBEC00DBE28F /* Classes */ = {
@@ -1022,12 +1050,14 @@
 				BB1078CA200512850088CE2F /* APIMethod+Icons.swift in Sources */,
 				BB8B942C2005497B00E3DF6E /* UIStoryboard+ConvenientAccess.swift in Sources */,
 				BB8B9410200544DE00E3DF6E /* ItemsEditRequestModel.swift in Sources */,
+				BB8F8D682005710F004B364E /* RoundedTextField.swift in Sources */,
 				BB8B9453200554FB00E3DF6E /* CGSize+Initialization.swift in Sources */,
 				BB1078A6200506C30088CE2F /* APIModelLists+ListResponseModel.swift in Sources */,
 				BB8B9469200557BD00E3DF6E /* HUDLoadingView.swift in Sources */,
 				BB8B940420053EF500E3DF6E /* AccountRegistrationRequestModel.swift in Sources */,
 				BB1078BA20050C520088CE2F /* APIModelItems+CreateRequestModel.swift in Sources */,
 				BB1078A02004FDAC0088CE2F /* APIModel+ItemModel.swift in Sources */,
+				BB8F8D6D2005795C004B364E /* ClearNavigationController.swift in Sources */,
 				BB1078A8200507080088CE2F /* APIModelItems+ListResponseModel.swift in Sources */,
 				BB10787F2004F5720088CE2F /* APIModelAccount+RegistrationRequestModel.swift in Sources */,
 				BB8B941D2005481000E3DF6E /* Router.swift in Sources */,
@@ -1043,6 +1073,7 @@
 				BB8B94622005575B00E3DF6E /* ModalViewController.swift in Sources */,
 				BB8B943920054A8700E3DF6E /* ImageAssets.swift in Sources */,
 				BB8B940A2005435C00E3DF6E /* ListsEditRequestModel.swift in Sources */,
+				BBB5AD622005824C00C99E86 /* LoginViewController.swift in Sources */,
 				BB10788F2004F8610088CE2F /* APIModel+ColorModel.swift in Sources */,
 				BB8B9482200563D500E3DF6E /* RegistrationRouter.swift in Sources */,
 				BB1078C82005127D0088CE2F /* APIMethod+Colors.swift in Sources */,
@@ -1085,6 +1116,7 @@
 				BB8B9475200558A900E3DF6E /* CALayer+Center.swift in Sources */,
 				BB840EFA2001781000B57E83 /* AppDelegate.swift in Sources */,
 				BB10786F2004E27C0088CE2F /* API+ResponseModel.swift in Sources */,
+				BB8F8D6A20057512004B364E /* RoundedButton.swift in Sources */,
 				BB8B9424200548F400E3DF6E /* UIImage+MaskWithColor.swift in Sources */,
 				BB1078612004DF020088CE2F /* API+Argument.swift in Sources */,
 				BB8B93FA2005287D00E3DF6E /* ServiceLayer.swift in Sources */,

@@ -34,8 +34,8 @@ final class APIService {
 private extension APIService {
     
     /// Уникальный идентификатор экземпляра приложения
-    var appId: String {
-        return self.applicationSettingsService.appId ?? .empty
+    var appId: Int {
+        return self.applicationSettingsService.appId
     }
     
     /// Токен

@@ -30,10 +30,10 @@ final class StartRouter: Router {
 
 extension StartRouter {
     
-    /// Отобразить регистрацию
-    func makeRootRegistration() {
-        let loginRouter = RegistrationRouter(presenter: self.presenter)
-        loginRouter.makeRootRegistration()
+    /// Отобразить авторизацию
+    func makeRootLogin() {
+        let registrationRouter = RegistrationRouter(presenter: self.presenter)
+        registrationRouter.makeRootLogin()
     }
     
     /// Отобразить списки

@@ -31,15 +31,12 @@ final class ApplicationSettingsService {
 extension ApplicationSettingsService {
     
     /// Уникальный идентификатор экземпляра приложения
-    var appId: String? {
+    var appId: Int {
         get {
-            return self.userDefaults.string(forKey: SettingsKeys.appId)
+            return self.userDefaults.integer(forKey: SettingsKeys.appId)
         }
         set {
-            let isEmpty = newValue?.isEmptyOrWhitespace ?? true
-            let appId = isEmpty ? nil : newValue
-            
-            self.userDefaults.set(appId, forKey: SettingsKeys.appId)
+            self.userDefaults.set(newValue, forKey: SettingsKeys.appId)
         }
     }
     

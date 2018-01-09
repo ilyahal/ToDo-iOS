@@ -12,14 +12,14 @@ final class LoginInfo {
     // MARK: - Публичные свойства
     
     /// Уникальный идентификатор экземпляра приложения
-    let appId: String
+    let appId: Int
     /// Секретный ключ экземпляра приложения
     let token: String
     
     
     // MARK: - Инициализация объекта
     
-    init(appId: String, token: String) {
+    init(appId: Int, token: String) {
         self.appId = appId
         self.token = token
     }

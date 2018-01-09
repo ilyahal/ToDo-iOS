@@ -1,16 +1,14 @@
 //
-//  RegistrationViewController.swift
+//  LoginViewController.swift
 //  ToDo
 //
-//  Created by Илья Халяпин on 09.01.2018.
+//  Created by Илья Халяпин on 10.01.2018.
 //  Copyright © 2018 Илья Халяпин. All rights reserved.
 //
 
-
-
 import UIKit
 
-final class RegistrationViewController: UIViewController {
+final class LoginViewController: UIViewController {
     
     // MARK: - Outlet
     
@@ -28,9 +26,9 @@ final class RegistrationViewController: UIViewController {
             newValue.delegate = self
         }
     }
-    /// Кнопка "Регистрация"
+    /// Кнопка "Войти"
     @IBOutlet
-    private weak var registrationButton: UIButton!
+    private weak var loginButton: UIButton!
     
     
     // MARK: - Приватные свойства
@@ -47,7 +45,7 @@ final class RegistrationViewController: UIViewController {
 
 // MARK: - Приватные свойства
 
-private extension RegistrationViewController {
+private extension LoginViewController {
     
     /// Введенный email
     var email: String? {
@@ -66,13 +64,17 @@ private extension RegistrationViewController {
 
 // MARK: - UIViewController
 
-extension RegistrationViewController {
+extension LoginViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Подготовка экрана
         setup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         // Загрузка данных
         getData()
@@ -83,11 +85,11 @@ extension RegistrationViewController {
 
 // MARK: - Action
 
-extension RegistrationViewController {
+extension LoginViewController {
     
-    /// Нажата кнопка "Регистрация"
+    /// Нажата кнопка "Войти"
     @IBAction
-    func registrationButtonTapped() {
+    func loginButtonTapped() {
         guard let email = self.email, email.isValidEmail else {
             let alertController = UIAlertController(title: "Ошибка", message: "Введен невалидный email.", preferredStyle: .alert)
             
@@ -109,7 +111,13 @@ extension RegistrationViewController {
         }
         
         self.applicationSettingsService.email = email
-        registration(with: email, and: password)
+        login(with: email, and: password)
+    }
+    
+    /// Нажата кнопка "Регистрация"
+    @IBAction
+    func registrationButtonTapped() {
+        self.router.showRegistration()
     }
     
 }
@@ -117,10 +125,12 @@ extension RegistrationViewController {
 
 // MARK: - Приватные методы
 
-private extension RegistrationViewController {
+private extension LoginViewController {
     
     /// Подготовка экрана
     func setup() {
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
         hideKeyboardWhenTappedAround()
         
         self.emailTextField.keyboardDistanceFromTextField = 140
@@ -132,24 +142,28 @@ private extension RegistrationViewController {
         self.emailTextField.text = self.applicationSettingsService.email
     }
     
-    /// Регистрация
-    func registration(with email: String, and password: String) {
+    /// Отправить email
+    func login(with email: String, and password: String) {
         
         // Отображаем окно загрузки
         let hud = self.router.presentModallyHUD(.loading)
         
         // Отправляем запрос
-        let requestData = AccountRegistrationRequestModel(email: email, password: password)
-        self.apiService.accountRegistration(requestData: requestData) { data in
+        let requestData = AccountLoginRequestModel(email: email, password: password)
+        self.apiService.accountLogin(requestData: requestData) { data in
             do {
-                try data()
+                let loginInfo = try data()
+                
+                self.applicationSettingsService.appId = loginInfo.appId
+                self.applicationSettingsService.token = loginInfo.token
+                self.applicationSettingsService.isLogined = true
                 
                 DispatchQueue.main.async {
                     hud.contentType = .success
                     
                     DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(800)) {
                         hud.dismiss(animated: true) {
-                            self.navigationController?.popViewController(animated: true)
+                            self.router.makeRootLists()
                         }
                     }
                 }
@@ -181,7 +195,7 @@ private extension RegistrationViewController {
 
 // MARK: - UITextFieldDelegate
 
-extension RegistrationViewController: UITextFieldDelegate {
+extension LoginViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
