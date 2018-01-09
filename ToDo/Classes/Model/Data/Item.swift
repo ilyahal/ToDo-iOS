@@ -15,6 +15,8 @@ final class Item: Entity {
     
     /// Идентификатор записи
     let itemId: Int
+    /// Идентификатор списка
+    let listId: Int
     /// Заголовок
     let title: String
     /// Описание
@@ -29,8 +31,9 @@ final class Item: Entity {
     
     // MARK: - Инициализация
     
-    init(itemId: Int, title: String, description: String?, isActive: Bool, insertDate: Date, updateDate: Date?) {
+    init(itemId: Int, listId: Int, title: String, description: String?, isActive: Bool, insertDate: Date, updateDate: Date?) {
         self.itemId = itemId
+        self.listId = listId
         self.title = title
         self.description = description
         self.isActive = isActive

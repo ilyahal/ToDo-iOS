@@ -17,6 +17,8 @@ extension API.Model {
         
         /// Идентификатор записи
         let itemId: Int
+        /// Идентификатор списка
+        let listId: Int
         /// Заголовок
         let title: String
         /// Описание
@@ -38,6 +40,8 @@ extension API.Model {
         init?(json: JSON) {
             guard let itemId = json[.itemId].int else { return nil }
             self.itemId = itemId
+            guard let listId = json[.listId].int else { return nil }
+            self.listId = listId
             guard let title = json[.title].string else { return nil }
             self.title = title
             self.description = json[.description].string
@@ -58,7 +62,7 @@ extension API.Model {
 extension API.Model.ItemModel {
     
     var entity: Item {
-        return Item(itemId: self.itemId, title: self.title, description: description, isActive: isActive, insertDate: self.insertDate, updateDate: self.updateDate)
+        return Item(itemId: self.itemId, listId: self.listId, title: self.title, description: description, isActive: isActive, insertDate: self.insertDate, updateDate: self.updateDate)
     }
     
 }
