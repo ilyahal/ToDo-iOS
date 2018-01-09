@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FiraSans-Regular.otf">
+            <string>FiraSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingView" customModule="ToDo" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicatorView" destination="kck-dg-Pyp" id="JYi-2q-4wb"/>
+                <outlet property="titleLabel" destination="wBX-Og-Agg" id="t9s-Ar-lhX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="MoN-G3-o2r">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pDf-4T-OQ6" userLabel="Message View">
+                    <rect key="frame" x="130" y="11.5" width="115" height="20"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="kck-dg-Pyp">
+                            <rect key="frame" x="0.0" y="-0.5" width="20" height="20"/>
+                            <color key="color" red="0.0" green="0.0" blue="0.098039215690000001" alpha="0.22" colorSpace="calibratedRGB"/>
+                        </activityIndicatorView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Загрузка..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBX-Og-Agg">
+                            <rect key="frame" x="28" y="0.0" width="87" height="20"/>
+                            <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.098039215690000001" alpha="0.22" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="wBX-Og-Agg" firstAttribute="top" secondItem="pDf-4T-OQ6" secondAttribute="top" id="1Nl-ED-Pxq"/>
+                        <constraint firstAttribute="bottom" secondItem="wBX-Og-Agg" secondAttribute="bottom" id="HLd-Vt-AND"/>
+                        <constraint firstItem="kck-dg-Pyp" firstAttribute="centerY" secondItem="pDf-4T-OQ6" secondAttribute="centerY" id="OpN-uL-yCK"/>
+                        <constraint firstItem="kck-dg-Pyp" firstAttribute="leading" secondItem="pDf-4T-OQ6" secondAttribute="leading" id="cHP-Rx-PDi"/>
+                        <constraint firstAttribute="trailing" secondItem="wBX-Og-Agg" secondAttribute="trailing" id="eil-NY-C8Y"/>
+                        <constraint firstItem="wBX-Og-Agg" firstAttribute="leading" secondItem="kck-dg-Pyp" secondAttribute="trailing" constant="8" id="lCp-zm-LRo"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="pDf-4T-OQ6" firstAttribute="centerX" secondItem="MoN-G3-o2r" secondAttribute="centerX" id="RLt-fh-KCp"/>
+                <constraint firstItem="pDf-4T-OQ6" firstAttribute="centerY" secondItem="MoN-G3-o2r" secondAttribute="centerY" id="yPu-Aq-SgN"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="cSL-ZK-XWQ"/>
+        </view>
+    </objects>
+</document>

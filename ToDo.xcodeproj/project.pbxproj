@@ -72,6 +72,26 @@
 		BB8B940E200544CD00E3DF6E /* ItemsCreateRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B940D200544CD00E3DF6E /* ItemsCreateRequestModel.swift */; };
 		BB8B9410200544DE00E3DF6E /* ItemsEditRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B940F200544DE00E3DF6E /* ItemsEditRequestModel.swift */; };
 		BB8B9412200544EF00E3DF6E /* ItemsDeleteRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B9411200544EF00E3DF6E /* ItemsDeleteRequestModel.swift */; };
+		BB8B9419200547E400E3DF6E /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B9418200547E400E3DF6E /* StoryboardIdentifiable.swift */; };
+		BB8B941B200547FE00E3DF6E /* CellIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B941A200547FE00E3DF6E /* CellIdentifiable.swift */; };
+		BB8B941D2005481000E3DF6E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B941C2005481000E3DF6E /* Router.swift */; };
+		BB8B9421200548A900E3DF6E /* NSLayoutConstraint+Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B9420200548A900E3DF6E /* NSLayoutConstraint+Description.swift */; };
+		BB8B9424200548F400E3DF6E /* UIImage+MaskWithColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B9423200548F400E3DF6E /* UIImage+MaskWithColor.swift */; };
+		BB8B94272005493400E3DF6E /* UIWindow+TransitToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B94262005493400E3DF6E /* UIWindow+TransitToViewController.swift */; };
+		BB8B942A2005495A00E3DF6E /* UIStoryboard+Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B94292005495A00E3DF6E /* UIStoryboard+Storyboards.swift */; };
+		BB8B942C2005497B00E3DF6E /* UIStoryboard+ConvenientAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B942B2005497B00E3DF6E /* UIStoryboard+ConvenientAccess.swift */; };
+		BB8B942F200549A900E3DF6E /* UIViewController+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B942E200549A900E3DF6E /* UIViewController+StoryboardIdentifiable.swift */; };
+		BB8B9431200549EC00E3DF6E /* UIViewController+HideKeyboardWhenTappedAround.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B9430200549EC00E3DF6E /* UIViewController+HideKeyboardWhenTappedAround.swift */; };
+		BB8B943420054A2100E3DF6E /* UINavigationController+Pop.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B943320054A2100E3DF6E /* UINavigationController+Pop.swift */; };
+		BB8B943720054A6200E3DF6E /* UITableViewCell+CellIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B943620054A6200E3DF6E /* UITableViewCell+CellIdentifiable.swift */; };
+		BB8B943920054A8700E3DF6E /* ImageAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B943820054A8700E3DF6E /* ImageAssets.swift */; };
+		BB8B943D20054B4400E3DF6E /* StackWidthLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B943C20054B4400E3DF6E /* StackWidthLabel.swift */; };
+		BB8B944020054B9B00E3DF6E /* ColoredImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B943F20054B9B00E3DF6E /* ColoredImageView.swift */; };
+		BB8B944520054BFC00E3DF6E /* UIView+FromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B944420054BFC00E3DF6E /* UIView+FromNib.swift */; };
+		BB8B944720054C1100E3DF6E /* UIView+LayoutAttachAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B944620054C1100E3DF6E /* UIView+LayoutAttachAll.swift */; };
+		BB8B944920054C4900E3DF6E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B944820054C4900E3DF6E /* LoadingView.swift */; };
+		BB8B944B20054C5000E3DF6E /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB8B944A20054C5000E3DF6E /* LoadingView.xib */; };
+		BB8B944E20054D8B00E3DF6E /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8B944D20054D8B00E3DF6E /* Control.swift */; };
 		BBE632CC2003ED4600DBE28F /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE632CB2003ED4600DBE28F /* APIConstants.swift */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +164,26 @@
 		BB8B940D200544CD00E3DF6E /* ItemsCreateRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCreateRequestModel.swift; sourceTree = "<group>"; };
 		BB8B940F200544DE00E3DF6E /* ItemsEditRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsEditRequestModel.swift; sourceTree = "<group>"; };
 		BB8B9411200544EF00E3DF6E /* ItemsDeleteRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsDeleteRequestModel.swift; sourceTree = "<group>"; };
+		BB8B9418200547E400E3DF6E /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
+		BB8B941A200547FE00E3DF6E /* CellIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifiable.swift; sourceTree = "<group>"; };
+		BB8B941C2005481000E3DF6E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		BB8B9420200548A900E3DF6E /* NSLayoutConstraint+Description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Description.swift"; sourceTree = "<group>"; };
+		BB8B9423200548F400E3DF6E /* UIImage+MaskWithColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+MaskWithColor.swift"; sourceTree = "<group>"; };
+		BB8B94262005493400E3DF6E /* UIWindow+TransitToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+TransitToViewController.swift"; sourceTree = "<group>"; };
+		BB8B94292005495A00E3DF6E /* UIStoryboard+Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Storyboards.swift"; sourceTree = "<group>"; };
+		BB8B942B2005497B00E3DF6E /* UIStoryboard+ConvenientAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+ConvenientAccess.swift"; sourceTree = "<group>"; };
+		BB8B942E200549A900E3DF6E /* UIViewController+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
+		BB8B9430200549EC00E3DF6E /* UIViewController+HideKeyboardWhenTappedAround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+HideKeyboardWhenTappedAround.swift"; sourceTree = "<group>"; };
+		BB8B943320054A2100E3DF6E /* UINavigationController+Pop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Pop.swift"; sourceTree = "<group>"; };
+		BB8B943620054A6200E3DF6E /* UITableViewCell+CellIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+CellIdentifiable.swift"; sourceTree = "<group>"; };
+		BB8B943820054A8700E3DF6E /* ImageAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAssets.swift; sourceTree = "<group>"; };
+		BB8B943C20054B4400E3DF6E /* StackWidthLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackWidthLabel.swift; sourceTree = "<group>"; };
+		BB8B943F20054B9B00E3DF6E /* ColoredImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredImageView.swift; sourceTree = "<group>"; };
+		BB8B944420054BFC00E3DF6E /* UIView+FromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FromNib.swift"; sourceTree = "<group>"; };
+		BB8B944620054C1100E3DF6E /* UIView+LayoutAttachAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LayoutAttachAll.swift"; sourceTree = "<group>"; };
+		BB8B944820054C4900E3DF6E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		BB8B944A20054C5000E3DF6E /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		BB8B944D20054D8B00E3DF6E /* Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
 		BBE632CB2003ED4600DBE28F /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		CE2311CB392A48B6B27604F9 /* Pods-ToDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToDo/Pods-ToDo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -380,6 +420,169 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		BB8B9413200547A100E3DF6E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B9414200547B100E3DF6E /* Helper */,
+				BB8B943A20054B2800E3DF6E /* View */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BB8B9414200547B100E3DF6E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B9417200547D900E3DF6E /* Protocols */,
+				BB8B941E2005484900E3DF6E /* Extensions */,
+				BB8B943820054A8700E3DF6E /* ImageAssets.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		BB8B9417200547D900E3DF6E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B9418200547E400E3DF6E /* StoryboardIdentifiable.swift */,
+				BB8B941A200547FE00E3DF6E /* CellIdentifiable.swift */,
+				BB8B941C2005481000E3DF6E /* Router.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BB8B941E2005484900E3DF6E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B941F2005489B00E3DF6E /* NSLayoutConstraint */,
+				BB8B9422200548EB00E3DF6E /* UIImage */,
+				BB8B94252005492000E3DF6E /* UIWindow */,
+				BB8B94282005494900E3DF6E /* UIStoryboard */,
+				BB8B942D2005499400E3DF6E /* UIViewController */,
+				BB8B943220054A0F00E3DF6E /* UINavigationController */,
+				BB8B944320054BE000E3DF6E /* UIView */,
+				BB8B943520054A4A00E3DF6E /* UITableViewCell */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BB8B941F2005489B00E3DF6E /* NSLayoutConstraint */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B9420200548A900E3DF6E /* NSLayoutConstraint+Description.swift */,
+			);
+			path = NSLayoutConstraint;
+			sourceTree = "<group>";
+		};
+		BB8B9422200548EB00E3DF6E /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B9423200548F400E3DF6E /* UIImage+MaskWithColor.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		BB8B94252005492000E3DF6E /* UIWindow */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B94262005493400E3DF6E /* UIWindow+TransitToViewController.swift */,
+			);
+			path = UIWindow;
+			sourceTree = "<group>";
+		};
+		BB8B94282005494900E3DF6E /* UIStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B94292005495A00E3DF6E /* UIStoryboard+Storyboards.swift */,
+				BB8B942B2005497B00E3DF6E /* UIStoryboard+ConvenientAccess.swift */,
+			);
+			path = UIStoryboard;
+			sourceTree = "<group>";
+		};
+		BB8B942D2005499400E3DF6E /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B942E200549A900E3DF6E /* UIViewController+StoryboardIdentifiable.swift */,
+				BB8B9430200549EC00E3DF6E /* UIViewController+HideKeyboardWhenTappedAround.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		BB8B943220054A0F00E3DF6E /* UINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B943320054A2100E3DF6E /* UINavigationController+Pop.swift */,
+			);
+			path = UINavigationController;
+			sourceTree = "<group>";
+		};
+		BB8B943520054A4A00E3DF6E /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B943620054A6200E3DF6E /* UITableViewCell+CellIdentifiable.swift */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		BB8B943A20054B2800E3DF6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B943B20054B3300E3DF6E /* UILabel */,
+				BB8B943E20054B8C00E3DF6E /* UIImageView */,
+				BB8B944120054BC200E3DF6E /* Custom View */,
+				BB8B944C20054D5F00E3DF6E /* Custom Control */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BB8B943B20054B3300E3DF6E /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B943C20054B4400E3DF6E /* StackWidthLabel.swift */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		BB8B943E20054B8C00E3DF6E /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B943F20054B9B00E3DF6E /* ColoredImageView.swift */,
+			);
+			path = UIImageView;
+			sourceTree = "<group>";
+		};
+		BB8B944120054BC200E3DF6E /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B944220054BD200E3DF6E /* LoadingView */,
+			);
+			path = "Custom View";
+			sourceTree = "<group>";
+		};
+		BB8B944220054BD200E3DF6E /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B944A20054C5000E3DF6E /* LoadingView.xib */,
+				BB8B944820054C4900E3DF6E /* LoadingView.swift */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		BB8B944320054BE000E3DF6E /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B944420054BFC00E3DF6E /* UIView+FromNib.swift */,
+				BB8B944620054C1100E3DF6E /* UIView+LayoutAttachAll.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		BB8B944C20054D5F00E3DF6E /* Custom Control */ = {
+			isa = PBXGroup;
+			children = (
+				BB8B944D20054D8B00E3DF6E /* Control.swift */,
+			);
+			path = "Custom Control";
+			sourceTree = "<group>";
+		};
 		BBE632C42003EBEC00DBE28F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -411,6 +614,7 @@
 		BBE632C72003EC4C00DBE28F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				BB8B9413200547A100E3DF6E /* Common */,
 				BBE632C82003EC8E00DBE28F /* LaunchScreen */,
 				BB1078CF20051CA80088CE2F /* Synchronization */,
 			);
@@ -523,6 +727,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB1078D120051CD40088CE2F /* Synchronization.storyboard in Resources */,
+				BB8B944B20054C5000E3DF6E /* LoadingView.xib in Resources */,
 				BB840F042001781000B57E83 /* LaunchScreen.storyboard in Resources */,
 				BB840F012001781000B57E83 /* Assets.xcassets in Resources */,
 			);
@@ -600,6 +805,7 @@
 				BB1078C42005107E0088CE2F /* API+Method.swift in Sources */,
 				BB1078B820050AAA0088CE2F /* APIModelLists+DeleteRequestModel.swift in Sources */,
 				BB1078CA200512850088CE2F /* APIMethod+Icons.swift in Sources */,
+				BB8B942C2005497B00E3DF6E /* UIStoryboard+ConvenientAccess.swift in Sources */,
 				BB8B9410200544DE00E3DF6E /* ItemsEditRequestModel.swift in Sources */,
 				BB1078A6200506C30088CE2F /* APIModelLists+ListResponseModel.swift in Sources */,
 				BB8B940420053EF500E3DF6E /* AccountRegistrationRequestModel.swift in Sources */,
@@ -607,17 +813,27 @@
 				BB1078A02004FDAC0088CE2F /* APIModel+ItemModel.swift in Sources */,
 				BB1078A8200507080088CE2F /* APIModelItems+ListResponseModel.swift in Sources */,
 				BB10787F2004F5720088CE2F /* APIModelAccount+RegistrationRequestModel.swift in Sources */,
+				BB8B941D2005481000E3DF6E /* Router.swift in Sources */,
+				BB8B942F200549A900E3DF6E /* UIViewController+StoryboardIdentifiable.swift in Sources */,
 				BB1078912004F9660088CE2F /* Color.swift in Sources */,
 				BB1078962004FA770088CE2F /* APIModelIcons+ListResponseModel.swift in Sources */,
+				BB8B9419200547E400E3DF6E /* StoryboardIdentifiable.swift in Sources */,
+				BB8B9431200549EC00E3DF6E /* UIViewController+HideKeyboardWhenTappedAround.swift in Sources */,
+				BB8B9421200548A900E3DF6E /* NSLayoutConstraint+Description.swift in Sources */,
+				BB8B944720054C1100E3DF6E /* UIView+LayoutAttachAll.swift in Sources */,
+				BB8B943920054A8700E3DF6E /* ImageAssets.swift in Sources */,
 				BB8B940A2005435C00E3DF6E /* ListsEditRequestModel.swift in Sources */,
 				BB10788F2004F8610088CE2F /* APIModel+ColorModel.swift in Sources */,
 				BB1078C82005127D0088CE2F /* APIMethod+Colors.swift in Sources */,
 				BB1078A22004FF5E0088CE2F /* Item.swift in Sources */,
 				BB10785F2004DED30088CE2F /* API+Helper.swift in Sources */,
+				BB8B944520054BFC00E3DF6E /* UIView+FromNib.swift in Sources */,
 				BB8B940C2005441600E3DF6E /* ListsDeleteRequestModel.swift in Sources */,
 				BBE632CC2003ED4600DBE28F /* APIConstants.swift in Sources */,
 				BB8B9412200544EF00E3DF6E /* ItemsDeleteRequestModel.swift in Sources */,
 				BB8B940E200544CD00E3DF6E /* ItemsCreateRequestModel.swift in Sources */,
+				BB8B944E20054D8B00E3DF6E /* Control.swift in Sources */,
+				BB8B942A2005495A00E3DF6E /* UIStoryboard+Storyboards.swift in Sources */,
 				BB1078B0200508B70088CE2F /* APIModelLists+CreateRequestModel.swift in Sources */,
 				BB1078C2200510180088CE2F /* APIModelItems+DeleteRequestModel.swift in Sources */,
 				BB8B93FC2005289900E3DF6E /* ApplicationSettingsService.swift in Sources */,
@@ -629,6 +845,7 @@
 				BB10786D2004E2700088CE2F /* API+RequestModel.swift in Sources */,
 				BB1078B620050A710088CE2F /* APIModelLists+EditResponseModel.swift in Sources */,
 				BB10788D2004F81E0088CE2F /* APIModelColors+ListResponseModel.swift in Sources */,
+				BB8B944020054B9B00E3DF6E /* ColoredImageView.swift in Sources */,
 				BB1078B4200509AD0088CE2F /* APIModelLists+EditRequestModel.swift in Sources */,
 				BB1078852004F6CE0088CE2F /* APIModel+LoginInfoModel.swift in Sources */,
 				BB1078672004E1EF0088CE2F /* API+Resource.swift in Sources */,
@@ -637,12 +854,16 @@
 				BB1078722004E2A20088CE2F /* APIModel+ErrorModel.swift in Sources */,
 				BB1078CE200512C10088CE2F /* APIMethod+APIMethod+Items.swift in Sources */,
 				BB45E2F520051FFA0050144B /* SynchronizationViewController.swift in Sources */,
+				BB8B944920054C4900E3DF6E /* LoadingView.swift in Sources */,
+				BB8B943720054A6200E3DF6E /* UITableViewCell+CellIdentifiable.swift in Sources */,
 				BB840EFA2001781000B57E83 /* AppDelegate.swift in Sources */,
 				BB10786F2004E27C0088CE2F /* API+ResponseModel.swift in Sources */,
+				BB8B9424200548F400E3DF6E /* UIImage+MaskWithColor.swift in Sources */,
 				BB1078612004DF020088CE2F /* API+Argument.swift in Sources */,
 				BB8B93FA2005287D00E3DF6E /* ServiceLayer.swift in Sources */,
 				BB1078632004E0A00088CE2F /* API+Error.swift in Sources */,
 				BB1078762004E35E0088CE2F /* String+Empty.swift in Sources */,
+				BB8B941B200547FE00E3DF6E /* CellIdentifiable.swift in Sources */,
 				BB1078BE20050E9B0088CE2F /* APIModelItems+EditRequestModel.swift in Sources */,
 				BB1078652004E1C90088CE2F /* API+ErrorHandling.swift in Sources */,
 				BB8B94082005422E00E3DF6E /* ListsCreateRequestModel.swift in Sources */,
@@ -651,11 +872,14 @@
 				BB10789E2004FCF40088CE2F /* List.swift in Sources */,
 				BB8B93FF200535CF00E3DF6E /* APIService.swift in Sources */,
 				BB8B940620053F9F00E3DF6E /* AccountLoginRequestModel.swift in Sources */,
+				BB8B943420054A2100E3DF6E /* UINavigationController+Pop.swift in Sources */,
+				BB8B94272005493400E3DF6E /* UIWindow+TransitToViewController.swift in Sources */,
 				BB1078932004F9A30088CE2F /* Entity.swift in Sources */,
 				BB10787A2004E3A50088CE2F /* String+IsValidEmail.swift in Sources */,
 				BB1078812004F61C0088CE2F /* APIModelAccount+LoginRequestModel.swift in Sources */,
 				BB10788A2004F7460088CE2F /* LoginInfo.swift in Sources */,
 				BB10789C2004FBF00088CE2F /* APIModel+ListModel.swift in Sources */,
+				BB8B943D20054B4400E3DF6E /* StackWidthLabel.swift in Sources */,
 				BB1078982004FAD70088CE2F /* APIModel+IconModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
