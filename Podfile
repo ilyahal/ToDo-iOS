@@ -12,4 +12,7 @@ target 'ToDo' do
     pod 'Alamofire'
     pod 'AlamofireNetworkActivityIndicator'
     
+    # Парсинг данных
+    pod 'SwiftyJSON'
+    
 end
