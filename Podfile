@@ -1,10 +1,8 @@
 # open source
 source 'https://github.com/CocoaPods/Specs.git'
 
-
 platform :ios, '9.0'
 use_frameworks!
-
 
 target 'ToDo' do
     
@@ -14,5 +12,8 @@ target 'ToDo' do
     
     # Парсинг данных
     pod 'SwiftyJSON'
+    
+    # Управление клавиатурой
+    pod 'IQKeyboardManagerSwift'
     
 end
