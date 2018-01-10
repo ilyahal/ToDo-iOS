@@ -22,4 +22,7 @@ target 'ToDo' do
     # Таблица
     pod 'DZNEmptyDataSet'
     
+    # Текстовое поле
+    pod 'KMPlaceholderTextView'
+    
 end
