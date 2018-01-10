@@ -90,8 +90,8 @@ extension ListsViewController {
 
 private extension ListsViewController {
     
+    // Подготовка экрана
     func setup() {
-        self.navigationItem.rightBarButtonItem = editButtonItem
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         self.tableView.allowsSelectionDuringEditing = true
@@ -104,6 +104,7 @@ private extension ListsViewController {
         self.tableView.emptyDataSetDelegate = self
     }
     
+    /// Загрузка данных
     func loadData() {
         guard self.isUpdateAvailable else { return }
         
@@ -119,31 +120,31 @@ private extension ListsViewController {
                     if success {
                         self?.loadColors { success in
                             if success {
-                                self?.isUpdateAvailable = true
                                 self?.status = .didLoad
                                 
+                                self?.navigationItem.rightBarButtonItem = self?.editButtonItem
                                 self?.endLoad()
                             } else {
-                                self?.isUpdateAvailable = true
                                 self?.endLoad()
                             }
                         }
                     } else {
-                        self?.isUpdateAvailable = true
                         self?.endLoad()
                     }
                 }
             } else {
-                self?.isUpdateAvailable = true
                 self?.endLoad()
             }
         }
     }
     
+    /// Загрузка данных завершена
     func endLoad() {
+        self.isUpdateAvailable = true
         self.tableView.reloadData()
     }
     
+    /// Загрузка списков
     func loadLists(completionHandler completion: @escaping (_ success: Bool) -> Void) {
         self.activeRequest = self.apiService.listsList { [weak self] data in
             guard let `self` = self else { return }
@@ -151,7 +152,7 @@ private extension ListsViewController {
             do {
                 let lists = try data()
                 
-                self.lists = lists
+                self.lists = lists.reversed()
                 
                 completion(true)
             } catch {
@@ -170,6 +171,7 @@ private extension ListsViewController {
         }
     }
     
+    /// Загрузка иконок
     func loadIcons(completionHandler completion: @escaping (_ success: Bool) -> Void) {
         self.activeRequest = self.apiService.iconsList { [weak self] data in
             guard let `self` = self else { return }
@@ -196,6 +198,7 @@ private extension ListsViewController {
         }
     }
     
+    /// Загрузка цветов
     func loadColors(completionHandler completion: @escaping (_ success: Bool) -> Void) {
         self.activeRequest = self.apiService.colorsList { [weak self] data in
             guard let `self` = self else { return }
@@ -222,6 +225,7 @@ private extension ListsViewController {
         }
     }
     
+    /// Отмена загрузки
     func cancelLoad() {
         self.isUpdateAvailable = true
         self.activeRequest?.cancel()
@@ -235,6 +239,7 @@ private extension ListsViewController {
         }
     }
     
+    /// Удаление списка
     func deleteList(_ list: List, at indexPath: IndexPath) {
         let hud = self.router.presentModallyHUD(.loading)
         
@@ -304,7 +309,7 @@ extension ListsViewController: UITableViewDataSource {
             let list = self.lists[indexPath.row - (self.isEditing ? 1 : 0)]
             deleteList(list, at: indexPath)
         case .insert:
-            // TODO: - Отображать создание списка
+            self.router.presentModallyAddList(colors: self.colors, icons: self.icons, delegate: self)
             break
         
         default:
@@ -337,10 +342,46 @@ extension ListsViewController: UITableViewDelegate {
         return .delete
     }
     
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        let list = self.lists[indexPath.row - (self.isEditing ? 1 : 0)]
+        self.router.presentModallyEditList(list: list, colors: self.colors, icons: self.icons, delegate: self)
+    }
+    
 }
 
 
-// MARK: DZNEmptyDataSetSource
+// MARK: - ListDetailTableViewControllerDelegate
+
+extension ListsViewController: ListDetailTableViewControllerDelegate {
+    
+    func listDetailTableViewController(_ listDetailTableViewController: ListDetailTableViewController, didCreate list: List) {
+        self.lists.insert(list, at: 0)
+        
+        let indexPath = IndexPath(row: self.isEditing ? 1 : 0, section: 0)
+        self.tableView.insertRows(at: [indexPath], with: .automatic)
+        
+        self.dismiss(animated: true)
+    }
+    
+    func listDetailTableViewController(_ listDetailTableViewController: ListDetailTableViewController, didEdit list: List) {
+        if let index = self.lists.index(where: { $0.listId == list.listId }) {
+            self.lists[index] = list
+            
+            let indexPath = IndexPath(row: index + (self.isEditing ? 1 : 0), section: 0)
+            self.tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
+        
+        self.dismiss(animated: true)
+    }
+    
+    func listDetailTableViewControllerCancel(_ listDetailTableViewController: ListDetailTableViewController) {
+        self.dismiss(animated: true)
+    }
+    
+}
+
+
+// MARK: - DZNEmptyDataSetSource
 
 extension ListsViewController: DZNEmptyDataSetSource {
     

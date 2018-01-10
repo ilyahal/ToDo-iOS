@@ -44,11 +44,11 @@ private extension ClearNavigationController {
     func configureNavigationBar() {
         
         // Задний фон
-        self.navigationBar.setBackgroundImage(UIImage.generate(with: .clear), for: .default)
+        self.navigationBar.setBackgroundImage(.generate(with: .clear), for: .default)
         self.navigationBar.isTranslucent = true
         
         // Разделитель
-        self.navigationBar.shadowImage = UIImage.generate(with: .clear)
+        self.navigationBar.shadowImage = .generate(with: .clear)
         
         // Цвет кнопок
         self.navigationBar.tintColor = .white

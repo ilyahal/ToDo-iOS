@@ -144,7 +144,7 @@
                                             <constraint firstAttribute="height" constant="50" id="jvD-vS-Y5O"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <state key="normal" title="Регистрация">
+                                        <state key="normal" title="Зарегистрироваться">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>

@@ -50,8 +50,8 @@ extension RegistrationRouter {
     /// Отобразить авторизацию
     func makeRootLogin() {
         let loginViewController = self.loginViewController
-        let navigationController = ClearNavigationController(rootViewController: loginViewController)
         
+        let navigationController = ClearNavigationController(rootViewController: loginViewController)
         makeRoot(navigationController)
     }
     

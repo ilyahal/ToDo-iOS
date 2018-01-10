@@ -44,7 +44,7 @@ private extension NavigationController {
     func configureNavigationBar() {
         
         // Задний фон
-        self.navigationBar.setBackgroundImage(UIImage.generate(with: #colorLiteral(red: 0, green: 0.7222121358, blue: 0.9383115172, alpha: 1)), for: .default)
+        self.navigationBar.setBackgroundImage(.generate(with: #colorLiteral(red: 0, green: 0.7222121358, blue: 0.9383115172, alpha: 1)), for: .default)
         
         // Цвет кнопок
         self.navigationBar.tintColor = .white

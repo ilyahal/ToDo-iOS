@@ -35,6 +35,11 @@ private extension ListsRouter {
         return viewController(ListsViewController.self)
     }
     
+    /// Иформация о списке
+    var listDetailTableViewController: ListDetailTableViewController {
+        return viewController(ListDetailTableViewController.self)
+    }
+    
 }
 
 
@@ -45,9 +50,32 @@ extension ListsRouter {
     /// Отобразить списки
     func makeRootLists() {
         let listsViewController = self.listsViewController
-        let navigationControllre = NavigationController(rootViewController: listsViewController)
         
+        let navigationControllre = NavigationController(rootViewController: listsViewController)
         makeRoot(navigationControllre)
+    }
+    
+    /// Отобразить создание списка
+    func presentModallyAddList(colors: [Color], icons: [Icon], delegate: ListDetailTableViewControllerDelegate) {
+        let listDetailTableViewController = self.listDetailTableViewController
+        listDetailTableViewController.delegate = delegate
+        listDetailTableViewController.colors = colors
+        listDetailTableViewController.icons = icons
+        
+        let navigationControllre = NavigationController(rootViewController: listDetailTableViewController)
+        presentModally(navigationControllre)
+    }
+    
+    /// Отобразить редактирование списка
+    func presentModallyEditList(list: List, colors: [Color], icons: [Icon], delegate: ListDetailTableViewControllerDelegate) {
+        let listDetailTableViewController = self.listDetailTableViewController
+        listDetailTableViewController.delegate = delegate
+        listDetailTableViewController.colors = colors
+        listDetailTableViewController.icons = icons
+        listDetailTableViewController.list = list
+        
+        let navigationControllre = NavigationController(rootViewController: listDetailTableViewController)
+        presentModally(navigationControllre)
     }
     
     /// Отобразить HUD
