@@ -267,7 +267,7 @@
                                 <action selector="cancelButtonTapped" destination="fUa-ZN-nGl" id="Way-bo-WHk"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="PO1-zo-G4p">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="PO1-zo-G4p">
                             <connections>
                                 <action selector="doneButtonTapped" destination="fUa-ZN-nGl" id="zgo-P0-rbh"/>
                             </connections>

@@ -21,6 +21,8 @@ extension UIStoryboard {
         case registration = "Registration"
         /// Списки
         case lists = "Lists"
+        /// Цвета
+        case colors = "Colors"
         
     }
     

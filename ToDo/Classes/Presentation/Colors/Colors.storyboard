@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Выбор цвета-->
+        <scene sceneID="CAI-vQ-qDn">
+            <objects>
+                <viewController storyboardIdentifier="ColorsViewController" id="OqH-mA-mBj" customClass="ColorsViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W6i-0v-Gqf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k6J-3o-Kct">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ColorTableViewCell" id="9ih-dh-UXV" customClass="ColorTableViewCell" customModule="ToDo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9ih-dh-UXV" id="Jos-nD-BBT">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fKB-eb-lg7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="cge-hM-k67"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="fKB-eb-lg7" secondAttribute="trailing" id="6oY-9m-w8Q"/>
+                                                <constraint firstAttribute="bottom" secondItem="fKB-eb-lg7" secondAttribute="bottom" id="GzJ-U8-dYx"/>
+                                                <constraint firstItem="fKB-eb-lg7" firstAttribute="leading" secondItem="Jos-nD-BBT" secondAttribute="leading" id="a5v-42-bL0"/>
+                                                <constraint firstItem="fKB-eb-lg7" firstAttribute="top" secondItem="Jos-nD-BBT" secondAttribute="top" id="n5e-cl-wDT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="backgroundImageView" destination="fKB-eb-lg7" id="FGU-EC-wd6"/>
+                                            <outlet property="backgroundImageViewTrailingLayoutConstraint" destination="6oY-9m-w8Q" id="6J6-in-1Xz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7WL-r0-eJr" firstAttribute="bottom" secondItem="k6J-3o-Kct" secondAttribute="bottom" id="GSc-b6-JIN"/>
+                            <constraint firstItem="k6J-3o-Kct" firstAttribute="leading" secondItem="7WL-r0-eJr" secondAttribute="leading" id="Yhj-NZ-VCj"/>
+                            <constraint firstItem="k6J-3o-Kct" firstAttribute="top" secondItem="7WL-r0-eJr" secondAttribute="top" id="bow-9S-vbx"/>
+                            <constraint firstItem="7WL-r0-eJr" firstAttribute="trailing" secondItem="k6J-3o-Kct" secondAttribute="trailing" id="n2u-Mj-uXi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7WL-r0-eJr"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Выбор цвета" id="QEq-rD-1t3">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Dzp-Ng-Xez">
+                            <connections>
+                                <action selector="cancelButtonTapped" destination="OqH-mA-mBj" id="YHF-yW-f40"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="1Bo-qZ-zqX">
+                            <connections>
+                                <action selector="doneButtonTapped" destination="OqH-mA-mBj" id="aMP-rp-f34"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="k6J-3o-Kct" id="fx0-ri-YGR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7x0-q4-P7S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="153" y="99"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.015686274510000001" green="0.66274509800000003" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+</document>

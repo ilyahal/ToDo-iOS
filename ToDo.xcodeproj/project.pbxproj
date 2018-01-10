@@ -63,6 +63,11 @@
 		BB826A792006570E00977A76 /* InsertListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB826A782006570E00977A76 /* InsertListTableViewCell.swift */; };
 		BB826A7D2006670100977A76 /* ListDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB826A7C2006670100977A76 /* ListDetailTableViewController.swift */; };
 		BB826A80200670C600977A76 /* ListDetailTableViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB826A7F200670C600977A76 /* ListDetailTableViewControllerDelegate.swift */; };
+		BB826A852006869B00977A76 /* Colors.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB826A842006869B00977A76 /* Colors.storyboard */; };
+		BB826A8A20068BD300977A76 /* ColorsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB826A8920068BD300977A76 /* ColorsRouter.swift */; };
+		BB826A8C20068BE000977A76 /* ColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB826A8B20068BE000977A76 /* ColorTableViewCell.swift */; };
+		BB826A8E20068BEE00977A76 /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB826A8D20068BEE00977A76 /* ColorsViewController.swift */; };
+		BB826A9020068D5400977A76 /* ColorsViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB826A8F20068D5400977A76 /* ColorsViewControllerDelegate.swift */; };
 		BB840EFA2001781000B57E83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB840EF92001781000B57E83 /* AppDelegate.swift */; };
 		BB840F012001781000B57E83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB840F002001781000B57E83 /* Assets.xcassets */; };
 		BB840F042001781000B57E83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB840F022001781000B57E83 /* LaunchScreen.storyboard */; };
@@ -184,6 +189,11 @@
 		BB826A782006570E00977A76 /* InsertListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertListTableViewCell.swift; sourceTree = "<group>"; };
 		BB826A7C2006670100977A76 /* ListDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDetailTableViewController.swift; sourceTree = "<group>"; };
 		BB826A7F200670C600977A76 /* ListDetailTableViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailTableViewControllerDelegate.swift; sourceTree = "<group>"; };
+		BB826A842006869B00977A76 /* Colors.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Colors.storyboard; sourceTree = "<group>"; };
+		BB826A8920068BD300977A76 /* ColorsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsRouter.swift; sourceTree = "<group>"; };
+		BB826A8B20068BE000977A76 /* ColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTableViewCell.swift; sourceTree = "<group>"; };
+		BB826A8D20068BEE00977A76 /* ColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
+		BB826A8F20068D5400977A76 /* ColorsViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewControllerDelegate.swift; sourceTree = "<group>"; };
 		BB840EF62001781000B57E83 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB840EF92001781000B57E83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB840F002001781000B57E83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -426,8 +436,7 @@
 		BB826A70200633C700977A76 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BB826A782006570E00977A76 /* InsertListTableViewCell.swift */,
-				BB826A71200633DB00977A76 /* ListTableViewCell.swift */,
+				BB826A93200699C600977A76 /* UITableViewCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -447,6 +456,67 @@
 				BB826A7F200670C600977A76 /* ListDetailTableViewControllerDelegate.swift */,
 			);
 			path = ListDetailTableViewController;
+			sourceTree = "<group>";
+		};
+		BB826A812006866900977A76 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				BB826A842006869B00977A76 /* Colors.storyboard */,
+				BB826A88200686B300977A76 /* Router */,
+				BB826A87200686AF00977A76 /* View */,
+				BB826A86200686A000977A76 /* View Controller */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		BB826A86200686A000977A76 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BB826A9120068DAC00977A76 /* ColorsViewController */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		BB826A87200686AF00977A76 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BB826A92200699AB00977A76 /* UITableViewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BB826A88200686B300977A76 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BB826A8920068BD300977A76 /* ColorsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		BB826A9120068DAC00977A76 /* ColorsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BB826A8D20068BEE00977A76 /* ColorsViewController.swift */,
+				BB826A8F20068D5400977A76 /* ColorsViewControllerDelegate.swift */,
+			);
+			path = ColorsViewController;
+			sourceTree = "<group>";
+		};
+		BB826A92200699AB00977A76 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BB826A8B20068BE000977A76 /* ColorTableViewCell.swift */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		BB826A93200699C600977A76 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BB826A782006570E00977A76 /* InsertListTableViewCell.swift */,
+				BB826A71200633DB00977A76 /* ListTableViewCell.swift */,
+			);
+			path = UITableViewCell;
 			sourceTree = "<group>";
 		};
 		BB840EED2001781000B57E83 = {
@@ -850,8 +920,8 @@
 		BB8F8D65200570DB004B364E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BB8F8D672005710F004B364E /* RoundedTextField.swift */,
-				BB8F8D6920057512004B364E /* RoundedButton.swift */,
+				BB9403CB20069A5000849FE1 /* UITextField */,
+				BB9403CC20069A5700849FE1 /* UIButton */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -863,6 +933,22 @@
 				BB826A6E200632FF00977A76 /* NavigationController.swift */,
 			);
 			path = UINavigationController;
+			sourceTree = "<group>";
+		};
+		BB9403CB20069A5000849FE1 /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				BB8F8D672005710F004B364E /* RoundedTextField.swift */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		BB9403CC20069A5700849FE1 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				BB8F8D6920057512004B364E /* RoundedButton.swift */,
+			);
+			path = UIButton;
 			sourceTree = "<group>";
 		};
 		BBE632C42003EBEC00DBE28F /* Classes */ = {
@@ -902,6 +988,7 @@
 				BB1078CF20051CA80088CE2F /* Start */,
 				BB8B947C2005636A00E3DF6E /* Registration */,
 				BB8B94852005656500E3DF6E /* Lists */,
+				BB826A812006866900977A76 /* Colors */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -1013,6 +1100,7 @@
 			files = (
 				BB1078D120051CD40088CE2F /* Start.storyboard in Resources */,
 				BB8B947E2005639F00E3DF6E /* Registration.storyboard in Resources */,
+				BB826A852006869B00977A76 /* Colors.storyboard in Resources */,
 				BB8B94562005558800E3DF6E /* Other.storyboard in Resources */,
 				BB8B944B20054C5000E3DF6E /* LoadingView.xib in Resources */,
 				BB840F042001781000B57E83 /* LaunchScreen.storyboard in Resources */,
@@ -1128,6 +1216,7 @@
 				BB8B9482200563D500E3DF6E /* RegistrationRouter.swift in Sources */,
 				BB1078C82005127D0088CE2F /* APIMethod+Colors.swift in Sources */,
 				BB1078A22004FF5E0088CE2F /* Item.swift in Sources */,
+				BB826A8A20068BD300977A76 /* ColorsRouter.swift in Sources */,
 				BB10785F2004DED30088CE2F /* API+Helper.swift in Sources */,
 				BB8B944520054BFC00E3DF6E /* UIView+FromNib.swift in Sources */,
 				BB826A80200670C600977A76 /* ListDetailTableViewControllerDelegate.swift in Sources */,
@@ -1161,7 +1250,9 @@
 				BB10785D2004DE9B0088CE2F /* API.swift in Sources */,
 				BB1078C020050F9B0088CE2F /* APIModelItems+EditResponseModel.swift in Sources */,
 				BB1078722004E2A20088CE2F /* APIModel+ErrorModel.swift in Sources */,
+				BB826A8E20068BEE00977A76 /* ColorsViewController.swift in Sources */,
 				BB1078CE200512C10088CE2F /* APIMethod+APIMethod+Items.swift in Sources */,
+				BB826A8C20068BE000977A76 /* ColorTableViewCell.swift in Sources */,
 				BB826A77200654DB00977A76 /* Array+Remove.swift in Sources */,
 				BB8B944920054C4900E3DF6E /* LoadingView.swift in Sources */,
 				BB8B943720054A6200E3DF6E /* UITableViewCell+CellIdentifiable.swift in Sources */,
@@ -1195,6 +1286,7 @@
 				BB10787A2004E3A50088CE2F /* String+IsValidEmail.swift in Sources */,
 				BB1078812004F61C0088CE2F /* APIModelAccount+LoginRequestModel.swift in Sources */,
 				BB8B945C200555E400E3DF6E /* HUDViewController.swift in Sources */,
+				BB826A9020068D5400977A76 /* ColorsViewControllerDelegate.swift in Sources */,
 				BB8B94722005586700E3DF6E /* ModalView.swift in Sources */,
 				BB10788A2004F7460088CE2F /* LoginInfo.swift in Sources */,
 				BB10789C2004FBF00088CE2F /* APIModel+ListModel.swift in Sources */,

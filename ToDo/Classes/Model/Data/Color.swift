@@ -39,3 +39,14 @@ final class Color: Entity {
     }
     
 }
+
+
+// MARK: - Equatable
+
+extension Color: Equatable {
+    
+    static func ==(lhs: Color, rhs: Color) -> Bool {
+        return lhs.colorId == rhs.colorId
+    }
+    
+}

@@ -360,7 +360,7 @@ extension ListsViewController: ListDetailTableViewControllerDelegate {
         let indexPath = IndexPath(row: self.isEditing ? 1 : 0, section: 0)
         self.tableView.insertRows(at: [indexPath], with: .automatic)
         
-        self.dismiss(animated: true)
+        listDetailTableViewController.dismiss(animated: true)
     }
     
     func listDetailTableViewController(_ listDetailTableViewController: ListDetailTableViewController, didEdit list: List) {
@@ -371,11 +371,11 @@ extension ListsViewController: ListDetailTableViewControllerDelegate {
             self.tableView.reloadRows(at: [indexPath], with: .automatic)
         }
         
-        self.dismiss(animated: true)
+        listDetailTableViewController.dismiss(animated: true)
     }
     
     func listDetailTableViewControllerCancel(_ listDetailTableViewController: ListDetailTableViewController) {
-        self.dismiss(animated: true)
+        listDetailTableViewController.dismiss(animated: true)
     }
     
 }

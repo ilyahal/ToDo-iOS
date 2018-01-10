@@ -51,8 +51,8 @@ extension ListsRouter {
     func makeRootLists() {
         let listsViewController = self.listsViewController
         
-        let navigationControllre = NavigationController(rootViewController: listsViewController)
-        makeRoot(navigationControllre)
+        let navigationController = NavigationController(rootViewController: listsViewController)
+        makeRoot(navigationController)
     }
     
     /// Отобразить создание списка
@@ -62,8 +62,8 @@ extension ListsRouter {
         listDetailTableViewController.colors = colors
         listDetailTableViewController.icons = icons
         
-        let navigationControllre = NavigationController(rootViewController: listDetailTableViewController)
-        presentModally(navigationControllre)
+        let navigationController = NavigationController(rootViewController: listDetailTableViewController)
+        presentModally(navigationController)
     }
     
     /// Отобразить редактирование списка
@@ -74,8 +74,8 @@ extension ListsRouter {
         listDetailTableViewController.icons = icons
         listDetailTableViewController.list = list
         
-        let navigationControllre = NavigationController(rootViewController: listDetailTableViewController)
-        presentModally(navigationControllre)
+        let navigationController = NavigationController(rootViewController: listDetailTableViewController)
+        presentModally(navigationController)
     }
     
     /// Отобразить HUD
@@ -83,6 +83,12 @@ extension ListsRouter {
     func presentModallyHUD(_ type: HUDContentType) -> HUDViewController {
         let otherRouter = OtherRouter(presenter: self.presenter)
         return otherRouter.presentModallyHUD(type)
+    }
+    
+    /// Отобразить цвета
+    func presentModallyColors(colors: [Color], active: Color, delegate: ColorsViewControllerDelegate) {
+        let colorsRouter = ColorsRouter(presenter: self.presenter)
+        colorsRouter.presentModallyColors(colors: colors, active: active, delegate: delegate)
     }
     
 }

@@ -106,6 +106,10 @@ extension ListDetailTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        if indexPath.section == 1 && indexPath.row == 0 {
+            self.router.presentModallyColors(colors: self.colors, active: self.color, delegate: self)
+        }
     }
     
 }
@@ -257,6 +261,22 @@ extension ListDetailTableViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+}
+
+
+// MARK: - ColorsViewControllerDelegate
+
+extension ListDetailTableViewController: ColorsViewControllerDelegate {
+    
+    func colorsViewController(_ colorsViewController: ColorsViewController, didSelect color: Color) {
+        self.color = color
+        colorsViewController.dismiss(animated: true)
+    }
+    
+    func colorsViewControllerCancel(_ colorsViewController: ColorsViewController) {
+        colorsViewController.dismiss(animated: true)
     }
     
 }
