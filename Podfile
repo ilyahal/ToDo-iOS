@@ -16,4 +16,10 @@ target 'ToDo' do
     # Управление клавиатурой
     pod 'IQKeyboardManagerSwift'
     
+    
+    ### Прочее
+    
+    # Таблица
+    pod 'DZNEmptyDataSet'
+    
 end
