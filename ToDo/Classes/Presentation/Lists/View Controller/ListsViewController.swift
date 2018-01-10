@@ -27,6 +27,8 @@ final class ListsViewController: UIViewController {
     
     private lazy var router: ListsRouter = ListsRouter(presenter: self)
     
+    /// Сервис настроек приложения
+    private let applicationSettingsService = ServiceLayer.instance.applicationSettingsService
     /// Сервис API
     private let apiService = ServiceLayer.instance.apiService
     
@@ -81,6 +83,35 @@ extension ListsViewController {
         }
         
         self.tableView.endUpdates()
+    }
+    
+}
+
+
+// MARK: - Action
+
+private extension ListsViewController {
+    
+    /// Нажата кнопка "Выйти"
+    @IBAction
+    func logoutButtonTapped() {
+        let alertController = UIAlertController(title: "Подтверждение", message: "Вы уверены что хотите выйти?", preferredStyle: .alert)
+        
+        let logoutAction = UIAlertAction(title: "Выйти", style: .destructive) { _ in
+            self.apiService.accountLogout()
+            
+            self.applicationSettingsService.appId = 0
+            self.applicationSettingsService.token = nil
+            self.applicationSettingsService.isLogined = false
+            
+            self.router.makeRootLogin()
+        }
+        alertController.addAction(logoutAction)
+        
+        let cancelAction = UIAlertAction(title: "Отмена", style: .cancel)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true)
     }
     
 }

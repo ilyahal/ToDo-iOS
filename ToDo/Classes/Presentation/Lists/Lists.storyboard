@@ -114,7 +114,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FDR-Z6-Rx7"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Списки" id="nCV-Ae-Iyq"/>
+                    <navigationItem key="navigationItem" title="Списки" id="nCV-Ae-Iyq">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="JUE-wh-278">
+                            <connections>
+                                <action selector="logoutButtonTapped" destination="bgk-rZ-3Ys" id="lnc-Xh-zUi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Zp2-hN-ZbS" id="ucK-Ls-5Dl"/>
                     </connections>

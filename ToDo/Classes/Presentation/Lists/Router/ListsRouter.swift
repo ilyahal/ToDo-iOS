@@ -85,6 +85,12 @@ extension ListsRouter {
         return otherRouter.presentModallyHUD(type)
     }
     
+    /// Отобразить авторизацию
+    func makeRootLogin() {
+        let registrationRouter = RegistrationRouter(presenter: self.presenter)
+        registrationRouter.makeRootLogin()
+    }
+    
     /// Отобразить цвета
     func presentModallyColors(colors: [Color], active: Color, delegate: ColorsViewControllerDelegate) {
         let colorsRouter = ColorsRouter(presenter: self.presenter)
