@@ -1,5 +1,5 @@
 //
-//  ListsViewController.swift
+//  ItemsViewController.swift
 //  ToDo
 //
 //  Created by Илья Халяпин on 10.01.2018.
@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import DZNEmptyDataSet
 
-final class ListsViewController: UIViewController {
+final class ItemsViewController: UIViewController {
     
     // MARK: - Outlet
     
@@ -23,19 +23,20 @@ final class ListsViewController: UIViewController {
     }
     
     
+    // MARK: - Публичные свойства
+    
+    var list: List!
+    
+    
     // MARK: - Приватные свойства
     
-    private lazy var router: ListsRouter = ListsRouter(presenter: self)
+    private lazy var router: ItemsRouter = ItemsRouter(presenter: self)
     
     /// Сервис API
     private let apiService = ServiceLayer.instance.apiService
     
-    /// Списки
-    private var lists: [List] = []
-    /// Цвета
-    private var colors: [Color] = []
-    /// Иконки
-    private var icons: [Icon] = []
+    /// Записи
+    private var items: [Item] = []
     
     /// Активный запрос
     private weak var activeRequest: Request?
@@ -44,12 +45,21 @@ final class ListsViewController: UIViewController {
     /// Доступность обновления
     private var isUpdateAvailable = true
     
+    
+    // MARK: - Деинициализация
+    
+    deinit {
+        
+        // Отменяем запрос
+        cancelLoad()
+    }
+    
 }
 
 
 // MARK: - UIViewController
 
-extension ListsViewController {
+extension ItemsViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,7 +98,7 @@ extension ListsViewController {
 
 // MARK: - Приватные методы
 
-private extension ListsViewController {
+private extension ItemsViewController {
     
     // Подготовка экрана
     func setup() {
@@ -112,29 +122,17 @@ private extension ListsViewController {
         guard self.isUpdateAvailable else { return }
         
         self.isUpdateAvailable = false
-        if self.lists.isEmpty {
+        if self.items.isEmpty {
             self.status = .load
             self.tableView.reloadData()
         }
         
-        loadLists { [weak self] success in
+        loadItems { [weak self] success in
             if success {
-                self?.loadIcons { success in
-                    if success {
-                        self?.loadColors { success in
-                            if success {
-                                self?.status = .didLoad
-                                
-                                self?.navigationItem.rightBarButtonItem?.isEnabled = true
-                                self?.endLoad()
-                            } else {
-                                self?.endLoad()
-                            }
-                        }
-                    } else {
-                        self?.endLoad()
-                    }
-                }
+                self?.status = .didLoad
+                
+                self?.navigationItem.rightBarButtonItem?.isEnabled = true
+                self?.endLoad()
             } else {
                 self?.endLoad()
             }
@@ -147,69 +145,16 @@ private extension ListsViewController {
         self.tableView.reloadData()
     }
     
-    /// Загрузка списков
-    func loadLists(completionHandler completion: @escaping (_ success: Bool) -> Void) {
-        self.activeRequest = self.apiService.listsList { [weak self] data in
+    /// Загрузка записей
+    func loadItems(completionHandler completion: @escaping (_ success: Bool) -> Void) {
+        let requestData = ItemsListRequestModel(listId: self.list.listId)
+        self.apiService.itemsList(requestData: requestData) { [weak self] data in
             guard let `self` = self else { return }
             
             do {
-                let lists = try data()
+                let items = try data()
                 
-                self.lists = lists.reversed()
-                
-                completion(true)
-            } catch {
-                if let error = error as? APIService.Error {
-                    if case .failed(_, let message) = error {
-                        self.status = .getError(message: message)
-                    }
-                } else {
-                    self.status = .getError(message: error.localizedDescription)
-                }
-                
-                if case .getError = self.status {
-                    completion(false)
-                }
-            }
-        }
-    }
-    
-    /// Загрузка иконок
-    func loadIcons(completionHandler completion: @escaping (_ success: Bool) -> Void) {
-        self.activeRequest = self.apiService.iconsList { [weak self] data in
-            guard let `self` = self else { return }
-            
-            do {
-                let icons = try data()
-                
-                self.icons = icons
-                
-                completion(true)
-            } catch {
-                if let error = error as? APIService.Error {
-                    if case .failed(_, let message) = error {
-                        self.status = .getError(message: message)
-                    }
-                } else {
-                    self.status = .getError(message: error.localizedDescription)
-                }
-                
-                if case .getError = self.status {
-                    completion(false)
-                }
-            }
-        }
-    }
-    
-    /// Загрузка цветов
-    func loadColors(completionHandler completion: @escaping (_ success: Bool) -> Void) {
-        self.activeRequest = self.apiService.colorsList { [weak self] data in
-            guard let `self` = self else { return }
-            
-            do {
-                let colors = try data()
-                
-                self.colors = colors
+                self.items = items.reversed()
                 
                 completion(true)
             } catch {
@@ -234,7 +179,7 @@ private extension ListsViewController {
         self.activeRequest?.cancel()
         
         if self.status == .load {
-            if self.lists.isEmpty {
+            if self.items.isEmpty {
                 self.status = .unknown
             } else {
                 self.status = .didLoad
@@ -242,21 +187,21 @@ private extension ListsViewController {
         }
     }
     
-    /// Удаление списка
-    func deleteList(_ list: List, at indexPath: IndexPath) {
+    /// Удаление записи
+    func deleteItem(_ item: Item, at indexPath: IndexPath) {
         let hud = self.router.presentModallyHUD(.loading)
         
-        let requestData = ListsDeleteRequestModel(listId: list.listId)
-        self.apiService.listsDelete(requestData: requestData) { data in
+        let requestData = ItemsDeleteRequestModel(itemId: item.itemId)
+        self.apiService.itemsDelete(requestData: requestData) { data in
             do {
                 try data()
                 
                 hud.contentType = .success
                 
-                self.lists.remove(object: list)
+                self.items.remove(object: item)
                 self.tableView.deleteRows(at: [indexPath], with: .automatic)
                 
-                if self.lists.isEmpty {
+                if self.items.isEmpty {
                     self.tableView.reloadData()
                 }
                 
@@ -286,22 +231,21 @@ private extension ListsViewController {
 
 // MARK: - UITableViewDataSource
 
-extension ListsViewController: UITableViewDataSource {
+extension ItemsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.lists.count + (self.isEditing ? 1 : 0)
+        return self.items.count + (self.isEditing ? 1 : 0)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if self.isEditing && indexPath.row == 0 {
-            return tableView.dequeueReusableCell(withIdentifier: InsertListTableViewCell.cellIdentifier, for: indexPath)
+            return tableView.dequeueReusableCell(withIdentifier: InsertItemTableViewCell.cellIdentifier, for: indexPath)
         }
         
-        let list = self.lists[indexPath.row - (self.isEditing ? 1 : 0)]
-        let color = self.colors.first(where: { $0.colorId == list.colorId })
-        let icon = self.icons.first(where: { $0.iconId == list.iconId })
-        let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.cellIdentifier, for: indexPath) as! ListTableViewCell
-        cell.configure(for: list, with: icon, and: color)
+        let item = self.items[indexPath.row - (self.isEditing ? 1 : 0)]
+        let cell = tableView.dequeueReusableCell(withIdentifier: ItemTableViewCell.cellIdentifier, for: indexPath) as! ItemTableViewCell
+        cell.configure(for: item)
+        cell.delegate = self
         
         return cell
     }
@@ -309,12 +253,12 @@ extension ListsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         switch editingStyle {
         case .delete:
-            let list = self.lists[indexPath.row - (self.isEditing ? 1 : 0)]
-            deleteList(list, at: indexPath)
+            let item = self.items[indexPath.row - (self.isEditing ? 1 : 0)]
+            deleteItem(item, at: indexPath)
         case .insert:
-            self.router.presentModallyAddList(colors: self.colors, icons: self.icons, delegate: self)
+            self.router.presentModallyAddItem(listId: self.list.listId, delegate: self)
             break
-        
+            
         default:
             break
         }
@@ -325,16 +269,13 @@ extension ListsViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 
-extension ListsViewController: UITableViewDelegate {
+extension ItemsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
         if self.isEditing && indexPath.row == 0 {
             self.tableView(tableView, commit: .insert, forRowAt: indexPath)
-        } else if !self.isEditing {
-            let list = self.lists[indexPath.row - (self.isEditing ? 1 : 0)]
-            self.router.showItems(list: list)
         }
     }
     
@@ -347,39 +288,84 @@ extension ListsViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        let list = self.lists[indexPath.row - (self.isEditing ? 1 : 0)]
-        self.router.presentModallyEditList(list: list, colors: self.colors, icons: self.icons, delegate: self)
+        let item = self.items[indexPath.row - (self.isEditing ? 1 : 0)]
+        self.router.presentModallyEditItem(listId: self.list.listId, item: item, delegate: self)
     }
     
 }
 
 
-// MARK: - ListDetailTableViewControllerDelegate
+// MARK: - ItemTableViewCellDelegate
 
-extension ListsViewController: ListDetailTableViewControllerDelegate {
+extension ItemsViewController: ItemTableViewCellDelegate {
     
-    func listDetailTableViewController(_ listDetailTableViewController: ListDetailTableViewController, didCreate list: List) {
-        self.lists.insert(list, at: 0)
+    func itemTableViewCell(_ itemTableViewCell: ItemTableViewCell, willChange item: Item) {
+        let hud = self.router.presentModallyHUD(.loading)
+        
+        let requestData = ItemsEditRequestModel(itemId: item.itemId, title: item.title, description: item.description, isActive: !item.isActive)
+        self.apiService.itemsEdit(requestData: requestData) { data in
+            do {
+                let item = try data()
+                
+                hud.contentType = .success
+                
+                if let index = self.items.index(where: { $0 == item }) {
+                    self.items[index] = item
+                    
+                    itemTableViewCell.item = item
+                    itemTableViewCell.updateActive()
+                }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(800)) {
+                    hud.dismiss(animated: true)
+                }
+            } catch {
+                guard let error = error as? APIService.Error, case .failed(_, let message) = error else {
+                    hud.dismiss(animated: true)
+                    return
+                }
+                
+                hud.dismiss(animated: true) {
+                    let alertController = UIAlertController(title: "Ошибка", message: message, preferredStyle: .alert)
+                    
+                    let okAction = UIAlertAction(title: "OK", style: .default)
+                    alertController.addAction(okAction)
+                    
+                    self.present(alertController, animated: true)
+                }
+            }
+        }
+    }
+    
+}
+
+
+// MARK: - ItemDetailTableViewControllerDelegate
+
+extension ItemsViewController: ItemDetailTableViewControllerDelegate {
+    
+    func itemDetailTableViewController(_ itemDetailTableViewController: ItemDetailTableViewController, didCreate item: Item) {
+        self.items.insert(item, at: 0)
         
         let indexPath = IndexPath(row: self.isEditing ? 1 : 0, section: 0)
         self.tableView.insertRows(at: [indexPath], with: .automatic)
         
-        listDetailTableViewController.dismiss(animated: true)
+        itemDetailTableViewController.dismiss(animated: true)
     }
     
-    func listDetailTableViewController(_ listDetailTableViewController: ListDetailTableViewController, didEdit list: List) {
-        if let index = self.lists.index(where: { $0 == list }) {
-            self.lists[index] = list
+    func itemDetailTableViewController(_ itemDetailTableViewController: ItemDetailTableViewController, didEdit item: Item) {
+        if let index = self.items.index(where: { $0 == item }) {
+            self.items[index] = item
             
             let indexPath = IndexPath(row: index + (self.isEditing ? 1 : 0), section: 0)
             self.tableView.reloadRows(at: [indexPath], with: .automatic)
         }
         
-        listDetailTableViewController.dismiss(animated: true)
+        itemDetailTableViewController.dismiss(animated: true)
     }
     
-    func listDetailTableViewControllerCancel(_ listDetailTableViewController: ListDetailTableViewController) {
-        listDetailTableViewController.dismiss(animated: true)
+    func itemDetailTableViewControllerCancel(_ itemDetailTableViewController: ItemDetailTableViewController) {
+        itemDetailTableViewController.dismiss(animated: true)
     }
     
 }
@@ -387,7 +373,7 @@ extension ListsViewController: ListDetailTableViewControllerDelegate {
 
 // MARK: - DZNEmptyDataSetSource
 
-extension ListsViewController: DZNEmptyDataSetSource {
+extension ItemsViewController: DZNEmptyDataSetSource {
     
     func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
         let text: String
@@ -395,7 +381,7 @@ extension ListsViewController: DZNEmptyDataSetSource {
         case .unknown, .load:
             return nil
         case .didLoad:
-            text = "Нет списков"
+            text = "Нет записей"
         case .getError(let message):
             text = message
         }
@@ -448,7 +434,7 @@ extension ListsViewController: DZNEmptyDataSetSource {
 
 // MARK: - DZNEmptyDataSetDelegate
 
-extension ListsViewController: DZNEmptyDataSetDelegate {
+extension ItemsViewController: DZNEmptyDataSetDelegate {
     
     func emptyDataSet(_ scrollView: UIScrollView!, didTap button: UIButton!) {
         loadData()

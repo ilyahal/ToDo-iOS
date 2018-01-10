@@ -97,4 +97,10 @@ extension ListsRouter {
         iconsRouter.presentModallyIcons(icons: icons, active: active, delegate: delegate)
     }
     
+    /// Отобразить записи
+    func showItems(list: List) {
+        let itemsRouter = ItemsRouter(presenter: self.presenter)
+        itemsRouter.showItems(list: list)
+    }
+    
 }

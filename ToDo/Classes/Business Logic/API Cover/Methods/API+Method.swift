@@ -80,6 +80,11 @@ extension API.Method {
                     print("HTTP BODY:\n\(httpBody)")
                 }
             }
+            if let httpData = response.data {
+                if let httpData = NSString(data: httpData, encoding: String.Encoding.utf8.rawValue) {
+                    print("HTTP DATA:\n\(httpData)")
+                }
+            }
             
             switch response.result {
             case .success(let value):
@@ -144,6 +149,11 @@ extension API.Method {
             if let httpBody = response.request?.httpBody {
                 if let httpBody = NSString(data: httpBody, encoding: String.Encoding.utf8.rawValue) {
                     print("HTTP BODY:\n\(httpBody)")
+                }
+            }
+            if let httpData = response.data {
+                if let httpData = NSString(data: httpData, encoding: String.Encoding.utf8.rawValue) {
+                    print("HTTP DATA:\n\(httpData)")
                 }
             }
             

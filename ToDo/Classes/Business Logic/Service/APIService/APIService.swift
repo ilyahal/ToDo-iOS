@@ -273,8 +273,8 @@ extension APIService {
     
     /// Получение записей
     @discardableResult
-    func itemsList(completionHandler completion: @escaping (_ data: () throws -> [Item]) -> Void) -> Request {
-        let request = API.Method.Items.list(appId: self.appId, token: self.token) { data in
+    func itemsList(requestData data: ItemsListRequestModel, completionHandler completion: @escaping (_ data: () throws -> [Item]) -> Void) -> Request {
+        let request = API.Method.Items.list(requestData: data.APIModel, appId: self.appId, token: self.token) { data in
             do {
                 let responseData = try data()
                 

@@ -17,6 +17,8 @@ final class ItemsCreateRequestModel {
     let title: String
     /// Описание
     let description: String?
+    /// Признак активности записи
+    let isActive: Bool
     
     
     // MARK: - Инициализация
@@ -26,11 +28,13 @@ final class ItemsCreateRequestModel {
      - parameter listId: Идентификатор списка
      - parameter title: Заголовок
      - parameter description: Описание
+     - parameter isActive: Признак активности записи
      */
-    init(listId: Int, title: String, description: String?) {
+    init(listId: Int, title: String, description: String?, isActive: Bool) {
         self.listId = listId
         self.title = title
         self.description = description
+        self.isActive = isActive
     }
     
 }
@@ -42,7 +46,7 @@ extension ItemsCreateRequestModel {
     
     /// Модель API
     var APIModel: API.Model.Items.CreateRequestModel {
-        let model = API.Model.Items.CreateRequestModel(listId: self.listId, title: self.title, description: self.description)
+        let model = API.Model.Items.CreateRequestModel(listId: self.listId, title: self.title, description: self.description, isActive: self.isActive)
         return model
     }
     

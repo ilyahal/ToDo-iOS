@@ -25,6 +25,8 @@ extension UIStoryboard {
         case colors = "Colors"
         /// Иконки
         case icons = "Icons"
+        /// Записи
+        case items = "Items"
         
     }
     

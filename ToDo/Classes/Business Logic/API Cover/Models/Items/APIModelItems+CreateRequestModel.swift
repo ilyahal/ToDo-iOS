@@ -21,6 +21,7 @@ extension API.Model.Items {
             nillableDictionary[.listId] = self.listId
             nillableDictionary[.title] = self.title
             nillableDictionary[.description] = self.description
+            nillableDictionary[.isActive] = self.isActive
             
             let json = API.Helper.rejectNil(API.Helper.translateKeys(nillableDictionary))
             return json
@@ -35,6 +36,8 @@ extension API.Model.Items {
         let title: String
         /// Описание
         let description: String?
+        /// Признак активности записи
+        let isActive: Bool
         
         
         // MARK: - Инициализация
@@ -44,11 +47,13 @@ extension API.Model.Items {
          - parameter listId: Идентификатор списка
          - parameter title: Заголовок
          - parameter description: Описание
+         - parameter isActive: Признак активности записи
          */
-        init(listId: Int, title: String, description: String?) {
+        init(listId: Int, title: String, description: String?, isActive: Bool) {
             self.listId = listId
             self.title = title
             self.description = description
+            self.isActive = isActive
         }
         
     }

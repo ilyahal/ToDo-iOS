@@ -100,7 +100,7 @@ extension ListDetailTableViewController {
 }
 
 
-// MARK: - UITableViewDataSource
+// MARK: - UITableViewDelegate
 
 extension ListDetailTableViewController {
     
@@ -160,6 +160,9 @@ private extension ListDetailTableViewController {
         self.title = self.list == nil ? "Создание" : "Редактирование"
         
         hideKeyboardWhenTappedAround()
+        
+        self.titleTextField.text = nil
+        self.descriptionTextView.text = nil
     }
     
     /// Подготовка данных
@@ -175,8 +178,10 @@ private extension ListDetailTableViewController {
     
     /// Отображение данных
     func showData() {
-        self.titleTextField.text = self.list?.title
-        self.descriptionTextView.text = self.list?.description
+        if let list = self.list {
+            self.titleTextField.text = list.title
+            self.descriptionTextView.text = list.description
+        }
         
         let color = UIColor(red: CGFloat(self.color.red) / 255.0, green: CGFloat(self.color.green) / 255.0, blue: CGFloat(self.color.blue) / 255.0, alpha: 1)
         self.colorImageView.image = .generate(with: color, size: self.colorImageView.frame.size)
