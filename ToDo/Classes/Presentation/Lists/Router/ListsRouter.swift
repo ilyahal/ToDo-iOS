@@ -91,4 +91,10 @@ extension ListsRouter {
         colorsRouter.presentModallyColors(colors: colors, active: active, delegate: delegate)
     }
     
+    /// Отобразить иконки
+    func presentModallyIcons(icons: [Icon], active: Icon, delegate: IconsViewControllerDelegate) {
+        let iconsRouter = IconsRouter(presenter: self.presenter)
+        iconsRouter.presentModallyIcons(icons: icons, active: active, delegate: delegate)
+    }
+    
 }

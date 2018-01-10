@@ -33,3 +33,14 @@ final class Icon: Entity {
     }
     
 }
+
+
+// MARK: - Equatable
+
+extension Icon: Equatable {
+    
+    static func ==(lhs: Icon, rhs: Icon) -> Bool {
+        return lhs.iconId == rhs.iconId
+    }
+    
+}

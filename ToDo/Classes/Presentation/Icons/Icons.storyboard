@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Выбор иконки-->
+        <scene sceneID="fld-37-I0Z">
+            <objects>
+                <viewController storyboardIdentifier="IconsViewController" id="cWe-le-Q6Q" customClass="IconsViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HS1-Mr-40H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4XU-Ry-Xsw">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="IconTableViewCell" rowHeight="72" id="dbs-T9-h4i" customClass="IconTableViewCell" customModule="ToDo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dbs-T9-h4i" id="u8I-FB-Hob">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="71.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="doc-wn-G6j">
+                                                    <rect key="frame" x="15" y="7.5" width="56" height="56"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="56" id="7JS-jY-xLP"/>
+                                                        <constraint firstAttribute="width" constant="56" id="KZr-cn-f0B"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="doc-wn-G6j" firstAttribute="leading" secondItem="u8I-FB-Hob" secondAttribute="leading" constant="15" id="Fih-pr-7bK"/>
+                                                <constraint firstAttribute="bottom" secondItem="doc-wn-G6j" secondAttribute="bottom" constant="8" id="HKn-dp-Vw5"/>
+                                                <constraint firstItem="doc-wn-G6j" firstAttribute="top" secondItem="u8I-FB-Hob" secondAttribute="top" constant="8" id="jHE-D7-GSZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="iconImageView" destination="doc-wn-G6j" id="Xjh-TD-2xk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4XU-Ry-Xsw" firstAttribute="top" secondItem="6jI-Jg-Lbv" secondAttribute="top" id="0sA-As-iFJ"/>
+                            <constraint firstItem="4XU-Ry-Xsw" firstAttribute="leading" secondItem="6jI-Jg-Lbv" secondAttribute="leading" id="EYL-DV-zZ3"/>
+                            <constraint firstItem="6jI-Jg-Lbv" firstAttribute="bottom" secondItem="4XU-Ry-Xsw" secondAttribute="bottom" id="URC-vS-RZk"/>
+                            <constraint firstItem="6jI-Jg-Lbv" firstAttribute="trailing" secondItem="4XU-Ry-Xsw" secondAttribute="trailing" id="X2n-Qv-kvP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6jI-Jg-Lbv"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Выбор иконки" id="rpQ-n0-6ER">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mUG-oR-fhV">
+                            <connections>
+                                <action selector="cancelButtonTapped" destination="cWe-le-Q6Q" id="FH9-nW-IHt"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="54n-eJ-uvy">
+                            <connections>
+                                <action selector="doneButtonTapped" destination="cWe-le-Q6Q" id="xn1-4i-O12"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="4XU-Ry-Xsw" id="NkV-hQ-GXL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nTi-Ge-KXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="153" y="99"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.015686274510000001" green="0.66274509800000003" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+</document>

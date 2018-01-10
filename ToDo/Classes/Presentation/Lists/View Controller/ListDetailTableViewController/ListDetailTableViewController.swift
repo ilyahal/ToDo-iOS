@@ -109,6 +109,8 @@ extension ListDetailTableViewController {
         
         if indexPath.section == 1 && indexPath.row == 0 {
             self.router.presentModallyColors(colors: self.colors, active: self.color, delegate: self)
+        } else if indexPath.section == 1 && indexPath.row == 1 {
+            self.router.presentModallyIcons(icons: self.icons, active: self.icon, delegate: self)
         }
     }
     
@@ -277,6 +279,22 @@ extension ListDetailTableViewController: ColorsViewControllerDelegate {
     
     func colorsViewControllerCancel(_ colorsViewController: ColorsViewController) {
         colorsViewController.dismiss(animated: true)
+    }
+    
+}
+
+
+// MARK: - IconsViewControllerDelegate
+
+extension ListDetailTableViewController: IconsViewControllerDelegate {
+    
+    func iconsViewController(_ iconsViewController: IconsViewController, didSelect icon: Icon) {
+        self.icon = icon
+        iconsViewController.dismiss(animated: true)
+    }
+    
+    func iconsViewControllerCancel(_ iconsViewController: IconsViewController) {
+        iconsViewController.dismiss(animated: true)
     }
     
 }

@@ -127,6 +127,11 @@
 		BB8F8D682005710F004B364E /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8F8D672005710F004B364E /* RoundedTextField.swift */; };
 		BB8F8D6A20057512004B364E /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8F8D6920057512004B364E /* RoundedButton.swift */; };
 		BB8F8D6D2005795C004B364E /* ClearNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8F8D6C2005795C004B364E /* ClearNavigationController.swift */; };
+		BB9403D420069B7600849FE1 /* IconsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9403D320069B7600849FE1 /* IconsViewController.swift */; };
+		BB9403D620069B9300849FE1 /* IconsViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9403D520069B9300849FE1 /* IconsViewControllerDelegate.swift */; };
+		BB9403D820069C7B00849FE1 /* IconTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9403D720069C7B00849FE1 /* IconTableViewCell.swift */; };
+		BB9403DA20069CD200849FE1 /* IconsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9403D920069CD200849FE1 /* IconsRouter.swift */; };
+		BB9403DC20069D3100849FE1 /* Icons.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB9403DB20069D3100849FE1 /* Icons.storyboard */; };
 		BBB5AD622005824C00C99E86 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5AD612005824C00C99E86 /* LoginViewController.swift */; };
 		BBE632CC2003ED4600DBE28F /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE632CB2003ED4600DBE28F /* APIConstants.swift */; };
 /* End PBXBuildFile section */
@@ -255,6 +260,11 @@
 		BB8F8D672005710F004B364E /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		BB8F8D6920057512004B364E /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		BB8F8D6C2005795C004B364E /* ClearNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearNavigationController.swift; sourceTree = "<group>"; };
+		BB9403D320069B7600849FE1 /* IconsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsViewController.swift; sourceTree = "<group>"; };
+		BB9403D520069B9300849FE1 /* IconsViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsViewControllerDelegate.swift; sourceTree = "<group>"; };
+		BB9403D720069C7B00849FE1 /* IconTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTableViewCell.swift; sourceTree = "<group>"; };
+		BB9403D920069CD200849FE1 /* IconsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsRouter.swift; sourceTree = "<group>"; };
+		BB9403DB20069D3100849FE1 /* Icons.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Icons.storyboard; sourceTree = "<group>"; };
 		BBB5AD612005824C00C99E86 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BBE632CB2003ED4600DBE28F /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		CE2311CB392A48B6B27604F9 /* Pods-ToDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToDo/Pods-ToDo.release.xcconfig"; sourceTree = "<group>"; };
@@ -951,6 +961,58 @@
 			path = UIButton;
 			sourceTree = "<group>";
 		};
+		BB9403CD20069B3700849FE1 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				BB9403DB20069D3100849FE1 /* Icons.storyboard */,
+				BB9403D020069B5200849FE1 /* Router */,
+				BB9403CF20069B4D00849FE1 /* View */,
+				BB9403CE20069B4600849FE1 /* View Controller */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		BB9403CE20069B4600849FE1 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BB9403D220069B6200849FE1 /* IconsViewController */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		BB9403CF20069B4D00849FE1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BB9403D120069B5800849FE1 /* UITableViewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BB9403D020069B5200849FE1 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BB9403D920069CD200849FE1 /* IconsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		BB9403D120069B5800849FE1 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BB9403D720069C7B00849FE1 /* IconTableViewCell.swift */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		BB9403D220069B6200849FE1 /* IconsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BB9403D320069B7600849FE1 /* IconsViewController.swift */,
+				BB9403D520069B9300849FE1 /* IconsViewControllerDelegate.swift */,
+			);
+			path = IconsViewController;
+			sourceTree = "<group>";
+		};
 		BBE632C42003EBEC00DBE28F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -989,6 +1051,7 @@
 				BB8B947C2005636A00E3DF6E /* Registration */,
 				BB8B94852005656500E3DF6E /* Lists */,
 				BB826A812006866900977A76 /* Colors */,
+				BB9403CD20069B3700849FE1 /* Icons */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -1103,6 +1166,7 @@
 				BB826A852006869B00977A76 /* Colors.storyboard in Resources */,
 				BB8B94562005558800E3DF6E /* Other.storyboard in Resources */,
 				BB8B944B20054C5000E3DF6E /* LoadingView.xib in Resources */,
+				BB9403DC20069D3100849FE1 /* Icons.storyboard in Resources */,
 				BB840F042001781000B57E83 /* LaunchScreen.storyboard in Resources */,
 				BB840F012001781000B57E83 /* Assets.xcassets in Resources */,
 				BB8B94872005657A00E3DF6E /* Lists.storyboard in Resources */,
@@ -1190,6 +1254,7 @@
 				BB8B9410200544DE00E3DF6E /* ItemsEditRequestModel.swift in Sources */,
 				BB8F8D682005710F004B364E /* RoundedTextField.swift in Sources */,
 				BB8B9453200554FB00E3DF6E /* CGSize+Initialization.swift in Sources */,
+				BB9403D820069C7B00849FE1 /* IconTableViewCell.swift in Sources */,
 				BB1078A6200506C30088CE2F /* APIModelLists+ListResponseModel.swift in Sources */,
 				BB8B9469200557BD00E3DF6E /* HUDLoadingView.swift in Sources */,
 				BB8B940420053EF500E3DF6E /* AccountRegistrationRequestModel.swift in Sources */,
@@ -1229,6 +1294,7 @@
 				BB8B947B2005630100E3DF6E /* StartRouter.swift in Sources */,
 				BB8B9459200555C900E3DF6E /* OtherRouter.swift in Sources */,
 				BB826A6F200632FF00977A76 /* NavigationController.swift in Sources */,
+				BB9403D420069B7600849FE1 /* IconsViewController.swift in Sources */,
 				BB8B94842005640C00E3DF6E /* RegistrationViewController.swift in Sources */,
 				BB1078B0200508B70088CE2F /* APIModelLists+CreateRequestModel.swift in Sources */,
 				BB1078C2200510180088CE2F /* APIModelItems+DeleteRequestModel.swift in Sources */,
@@ -1239,6 +1305,7 @@
 				BB1078CC2005128E0088CE2F /* APIMethod+Lists.swift in Sources */,
 				BB1078832004F6850088CE2F /* APIModelAccount+LoginResponseModel.swift in Sources */,
 				BB10786D2004E2700088CE2F /* API+RequestModel.swift in Sources */,
+				BB9403D620069B9300849FE1 /* IconsViewControllerDelegate.swift in Sources */,
 				BB1078B620050A710088CE2F /* APIModelLists+EditResponseModel.swift in Sources */,
 				BB10788D2004F81E0088CE2F /* APIModelColors+ListResponseModel.swift in Sources */,
 				BB8B944020054B9B00E3DF6E /* ColoredImageView.swift in Sources */,
@@ -1288,6 +1355,7 @@
 				BB8B945C200555E400E3DF6E /* HUDViewController.swift in Sources */,
 				BB826A9020068D5400977A76 /* ColorsViewControllerDelegate.swift in Sources */,
 				BB8B94722005586700E3DF6E /* ModalView.swift in Sources */,
+				BB9403DA20069CD200849FE1 /* IconsRouter.swift in Sources */,
 				BB10788A2004F7460088CE2F /* LoginInfo.swift in Sources */,
 				BB10789C2004FBF00088CE2F /* APIModel+ListModel.swift in Sources */,
 				BB8B9451200554E100E3DF6E /* UIImage+ImageWithColor.swift in Sources */,
