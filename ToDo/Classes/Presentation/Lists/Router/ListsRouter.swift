@@ -45,7 +45,16 @@ extension ListsRouter {
     /// Отобразить списки
     func makeRootLists() {
         let listsViewController = self.listsViewController
-        makeRoot(listsViewController)
+        let navigationControllre = NavigationController(rootViewController: listsViewController)
+        
+        makeRoot(navigationControllre)
+    }
+    
+    /// Отобразить HUD
+    @discardableResult
+    func presentModallyHUD(_ type: HUDContentType) -> HUDViewController {
+        let otherRouter = OtherRouter(presenter: self.presenter)
+        return otherRouter.presentModallyHUD(type)
     }
     
 }

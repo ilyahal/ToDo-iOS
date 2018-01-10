@@ -158,33 +158,26 @@ private extension LoginViewController {
                 self.applicationSettingsService.token = loginInfo.token
                 self.applicationSettingsService.isLogined = true
                 
-                DispatchQueue.main.async {
-                    hud.contentType = .success
-                    
-                    DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(800)) {
-                        hud.dismiss(animated: true) {
-                            self.router.makeRootLists()
-                        }
+                hud.contentType = .success
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(800)) {
+                    hud.dismiss(animated: true) {
+                        self.router.makeRootLists()
                     }
                 }
             } catch {
                 guard let error = error as? APIService.Error, case .failed(_, let message) = error else {
-                    DispatchQueue.main.async {
-                        hud.dismiss(animated: true)
-                    }
-                    
+                    hud.dismiss(animated: true)
                     return
                 }
                 
-                DispatchQueue.main.async {
-                    hud.dismiss(animated: true) {
-                        let alertController = UIAlertController(title: "Ошибка", message: message, preferredStyle: .alert)
-                        
-                        let okAction = UIAlertAction(title: "OK", style: .default)
-                        alertController.addAction(okAction)
-                        
-                        self.present(alertController, animated: true)
-                    }
+                hud.dismiss(animated: true) {
+                    let alertController = UIAlertController(title: "Ошибка", message: message, preferredStyle: .alert)
+                    
+                    let okAction = UIAlertAction(title: "OK", style: .default)
+                    alertController.addAction(okAction)
+                    
+                    self.present(alertController, animated: true)
                 }
             }
         }

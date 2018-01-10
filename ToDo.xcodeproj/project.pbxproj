@@ -56,6 +56,11 @@
 		BB1078CC2005128E0088CE2F /* APIMethod+Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1078CB2005128E0088CE2F /* APIMethod+Lists.swift */; };
 		BB1078CE200512C10088CE2F /* APIMethod+APIMethod+Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1078CD200512C10088CE2F /* APIMethod+APIMethod+Items.swift */; };
 		BB1078D120051CD40088CE2F /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB1078D020051CD40088CE2F /* Start.storyboard */; };
+		BB826A6F200632FF00977A76 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB826A6E200632FF00977A76 /* NavigationController.swift */; };
+		BB826A72200633DB00977A76 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB826A71200633DB00977A76 /* ListTableViewCell.swift */; };
+		BB826A7420063B1600977A76 /* LoadingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB826A7320063B1600977A76 /* LoadingStatus.swift */; };
+		BB826A77200654DB00977A76 /* Array+Remove.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB826A76200654DB00977A76 /* Array+Remove.swift */; };
+		BB826A792006570E00977A76 /* InsertListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB826A782006570E00977A76 /* InsertListTableViewCell.swift */; };
 		BB840EFA2001781000B57E83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB840EF92001781000B57E83 /* AppDelegate.swift */; };
 		BB840F012001781000B57E83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB840F002001781000B57E83 /* Assets.xcassets */; };
 		BB840F042001781000B57E83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB840F022001781000B57E83 /* LaunchScreen.storyboard */; };
@@ -170,6 +175,11 @@
 		BB1078CB2005128E0088CE2F /* APIMethod+Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIMethod+Lists.swift"; sourceTree = "<group>"; };
 		BB1078CD200512C10088CE2F /* APIMethod+APIMethod+Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIMethod+APIMethod+Items.swift"; sourceTree = "<group>"; };
 		BB1078D020051CD40088CE2F /* Start.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
+		BB826A6E200632FF00977A76 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		BB826A71200633DB00977A76 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		BB826A7320063B1600977A76 /* LoadingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStatus.swift; sourceTree = "<group>"; };
+		BB826A76200654DB00977A76 /* Array+Remove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Remove.swift"; sourceTree = "<group>"; };
+		BB826A782006570E00977A76 /* InsertListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertListTableViewCell.swift; sourceTree = "<group>"; };
 		BB840EF62001781000B57E83 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB840EF92001781000B57E83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB840F002001781000B57E83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -302,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				BB1078742004E34C0088CE2F /* String */,
+				BB826A75200654C700977A76 /* Array */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -406,6 +417,23 @@
 				BB8B94782005628F00E3DF6E /* View Controller */,
 			);
 			path = Start;
+			sourceTree = "<group>";
+		};
+		BB826A70200633C700977A76 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BB826A782006570E00977A76 /* InsertListTableViewCell.swift */,
+				BB826A71200633DB00977A76 /* ListTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BB826A75200654C700977A76 /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				BB826A76200654DB00977A76 /* Array+Remove.swift */,
+			);
+			path = Array;
 			sourceTree = "<group>";
 		};
 		BB840EED2001781000B57E83 = {
@@ -721,6 +749,7 @@
 			isa = PBXGroup;
 			children = (
 				BB8B946F2005583000E3DF6E /* HUDContentType.swift */,
+				BB826A7320063B1600977A76 /* LoadingStatus.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -782,6 +811,7 @@
 			children = (
 				BB8B94862005657A00E3DF6E /* Lists.storyboard */,
 				BB8B94882005658500E3DF6E /* Router */,
+				BB826A70200633C700977A76 /* View */,
 				BB8B948B2005659800E3DF6E /* View Controller */,
 			);
 			path = Lists;
@@ -816,6 +846,7 @@
 			isa = PBXGroup;
 			children = (
 				BB8F8D6C2005795C004B364E /* ClearNavigationController.swift */,
+				BB826A6E200632FF00977A76 /* NavigationController.swift */,
 			);
 			path = UINavigationController;
 			sourceTree = "<group>";
@@ -1051,6 +1082,7 @@
 				BB1078B820050AAA0088CE2F /* APIModelLists+DeleteRequestModel.swift in Sources */,
 				BB1078CA200512850088CE2F /* APIMethod+Icons.swift in Sources */,
 				BB8B942C2005497B00E3DF6E /* UIStoryboard+ConvenientAccess.swift in Sources */,
+				BB826A7420063B1600977A76 /* LoadingStatus.swift in Sources */,
 				BB8B9410200544DE00E3DF6E /* ItemsEditRequestModel.swift in Sources */,
 				BB8F8D682005710F004B364E /* RoundedTextField.swift in Sources */,
 				BB8B9453200554FB00E3DF6E /* CGSize+Initialization.swift in Sources */,
@@ -1090,6 +1122,7 @@
 				BB8B942A2005495A00E3DF6E /* UIStoryboard+Storyboards.swift in Sources */,
 				BB8B947B2005630100E3DF6E /* StartRouter.swift in Sources */,
 				BB8B9459200555C900E3DF6E /* OtherRouter.swift in Sources */,
+				BB826A6F200632FF00977A76 /* NavigationController.swift in Sources */,
 				BB8B94842005640C00E3DF6E /* RegistrationViewController.swift in Sources */,
 				BB1078B0200508B70088CE2F /* APIModelLists+CreateRequestModel.swift in Sources */,
 				BB1078C2200510180088CE2F /* APIModelItems+DeleteRequestModel.swift in Sources */,
@@ -1112,6 +1145,7 @@
 				BB1078C020050F9B0088CE2F /* APIModelItems+EditResponseModel.swift in Sources */,
 				BB1078722004E2A20088CE2F /* APIModel+ErrorModel.swift in Sources */,
 				BB1078CE200512C10088CE2F /* APIMethod+APIMethod+Items.swift in Sources */,
+				BB826A77200654DB00977A76 /* Array+Remove.swift in Sources */,
 				BB8B944920054C4900E3DF6E /* LoadingView.swift in Sources */,
 				BB8B943720054A6200E3DF6E /* UITableViewCell+CellIdentifiable.swift in Sources */,
 				BB8B94772005628500E3DF6E /* StartViewController.swift in Sources */,
@@ -1122,6 +1156,7 @@
 				BB8B9424200548F400E3DF6E /* UIImage+MaskWithColor.swift in Sources */,
 				BB1078612004DF020088CE2F /* API+Argument.swift in Sources */,
 				BB8B93FA2005287D00E3DF6E /* ServiceLayer.swift in Sources */,
+				BB826A792006570E00977A76 /* InsertListTableViewCell.swift in Sources */,
 				BB1078632004E0A00088CE2F /* API+Error.swift in Sources */,
 				BB1078762004E35E0088CE2F /* String+Empty.swift in Sources */,
 				BB8B941B200547FE00E3DF6E /* CellIdentifiable.swift in Sources */,
@@ -1133,6 +1168,7 @@
 				BB10789A2004FB840088CE2F /* Icon.swift in Sources */,
 				BB10789E2004FCF40088CE2F /* List.swift in Sources */,
 				BB8B93FF200535CF00E3DF6E /* APIService.swift in Sources */,
+				BB826A72200633DB00977A76 /* ListTableViewCell.swift in Sources */,
 				BB8B940620053F9F00E3DF6E /* AccountLoginRequestModel.swift in Sources */,
 				BB8B943420054A2100E3DF6E /* UINavigationController+Pop.swift in Sources */,
 				BB8B94272005493400E3DF6E /* UIWindow+TransitToViewController.swift in Sources */,

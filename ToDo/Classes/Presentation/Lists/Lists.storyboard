@@ -10,20 +10,119 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Lists View Controller-->
+        <!--Списки-->
         <scene sceneID="hsS-mu-7Tr">
             <objects>
                 <viewController storyboardIdentifier="ListsViewController" id="bgk-rZ-3Ys" customClass="ListsViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zeG-HD-dwo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.53649164439999997" green="0.54213892490000004" blue="0.54213892490000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zp2-hN-ZbS">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InsertListTableViewCell" textLabel="84G-OI-Acs" style="IBUITableViewCellStyleDefault" id="0Do-i6-csu" customClass="InsertListTableViewCell" customModule="ToDo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Do-i6-csu" id="KnE-r4-UeT">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Создать список" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="84G-OI-Acs">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.08235294118" green="0.08235294118" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ListTableViewCell" editingAccessoryType="detailButton" rowHeight="54" id="DeG-vm-aRy" customClass="ListTableViewCell" customModule="ToDo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DeG-vm-aRy" id="JQT-El-i2i">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="53.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WSq-I0-Evp">
+                                                    <rect key="frame" x="8" y="12" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="oCk-Yu-pth"/>
+                                                        <constraint firstAttribute="width" constant="30" id="xle-YL-oT3"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fy6-by-dbt">
+                                                    <rect key="frame" x="46" y="6" width="292" height="41.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gRb-RJ-vHL">
+                                                            <rect key="frame" x="0.0" y="1.5" width="292" height="38.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;title&gt;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcm-8z-qNM" customClass="StackWidthLabel" customModule="ToDo" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="292" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" red="0.08235294118" green="0.08235294118" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;description&gt;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcU-Xm-fZf" customClass="StackWidthLabel" customModule="ToDo" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="20.5" width="292" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" red="0.38431372549999998" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="3xe-IA-bXa"/>
+                                                        <constraint firstItem="gRb-RJ-vHL" firstAttribute="centerY" secondItem="Fy6-by-dbt" secondAttribute="centerY" id="5Ti-W2-Y4S"/>
+                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gRb-RJ-vHL" secondAttribute="bottom" id="FPN-tj-Ly2"/>
+                                                        <constraint firstItem="gRb-RJ-vHL" firstAttribute="leading" secondItem="Fy6-by-dbt" secondAttribute="leading" id="VHb-KE-tFD"/>
+                                                        <constraint firstItem="gRb-RJ-vHL" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Fy6-by-dbt" secondAttribute="top" id="dQC-3e-75T"/>
+                                                        <constraint firstAttribute="trailing" secondItem="gRb-RJ-vHL" secondAttribute="trailing" id="jG8-7O-Ui6"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Fy6-by-dbt" secondAttribute="trailing" constant="4" id="0hu-yM-aab"/>
+                                                <constraint firstAttribute="bottom" secondItem="Fy6-by-dbt" secondAttribute="bottom" constant="6" id="1or-bl-Be0"/>
+                                                <constraint firstItem="WSq-I0-Evp" firstAttribute="leading" secondItem="JQT-El-i2i" secondAttribute="leading" constant="8" id="3a8-OG-4T2"/>
+                                                <constraint firstItem="Fy6-by-dbt" firstAttribute="leading" secondItem="WSq-I0-Evp" secondAttribute="trailing" constant="8" id="WJM-vl-mJN"/>
+                                                <constraint firstItem="Fy6-by-dbt" firstAttribute="top" secondItem="JQT-El-i2i" secondAttribute="top" constant="6" id="rGT-Kk-Lk7"/>
+                                                <constraint firstItem="WSq-I0-Evp" firstAttribute="centerY" secondItem="JQT-El-i2i" secondAttribute="centerY" id="sPJ-0p-aIt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="gcU-Xm-fZf" id="KAx-Vm-PDp"/>
+                                            <outlet property="iconImageView" destination="WSq-I0-Evp" id="PQm-l6-2mk"/>
+                                            <outlet property="titleLabel" destination="rcm-8z-qNM" id="2Jc-Sf-JTW"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FDR-Z6-Rx7" firstAttribute="trailing" secondItem="Zp2-hN-ZbS" secondAttribute="trailing" id="0f6-Qd-0qD"/>
+                            <constraint firstItem="FDR-Z6-Rx7" firstAttribute="bottom" secondItem="Zp2-hN-ZbS" secondAttribute="bottom" id="KD1-1P-9fD"/>
+                            <constraint firstItem="Zp2-hN-ZbS" firstAttribute="leading" secondItem="FDR-Z6-Rx7" secondAttribute="leading" id="hHW-xf-CXX"/>
+                            <constraint firstItem="Zp2-hN-ZbS" firstAttribute="top" secondItem="FDR-Z6-Rx7" secondAttribute="top" id="jaF-NG-FHB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FDR-Z6-Rx7"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Списки" id="nCV-Ae-Iyq"/>
+                    <connections>
+                        <outlet property="tableView" destination="Zp2-hN-ZbS" id="ucK-Ls-5Dl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mU3-iD-uSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="31" y="83"/>
+            <point key="canvasLocation" x="29.600000000000001" y="82.3088455772114"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.015686274510000001" green="0.66274509800000003" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -31,7 +31,7 @@ extension API.Method.Lists {
     /// Удаление списка
     @discardableResult
     static func delete(requestData data: API.Model.Lists.DeleteRequestModel, appId: Int, token: String, completionHandler completion: @escaping (_ data: API.Method.VoidResponse) -> Void) -> Request {
-        return API.Method.requestBuilder(resource: .listsDelete, appId: appId, token: token, completionHandler: completion)
+        return API.Method.requestBuilder(resource: .listsDelete, requestData: data, appId: appId, token: token, completionHandler: completion)
     }
     
 }

@@ -42,3 +42,14 @@ final class List: Entity {
     }
     
 }
+
+
+// MARK: - Equatable
+
+extension List: Equatable {
+    
+    static func ==(lhs: List, rhs: List) -> Bool {
+        return lhs.listId == rhs.listId
+    }
+    
+}
