@@ -29,6 +29,7 @@ final class ListTableViewCell: UITableViewCell {
 
 extension ListTableViewCell {
     
+    /// Настройка
     func configure(for list: List, with icon: Icon?, and color: Color?) {
         if let icon = icon {
             var image = UIImage(named: "api_\(icon.name)")

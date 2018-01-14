@@ -24,12 +24,13 @@ extension UIWindow {
     private func transit(to viewController: UIViewController) {
         let currentSubviews = self.subviews
         
-        insertSubview(viewController.view, belowSubview: self.rootViewController!.view)
+        guard let rootViewController = self.rootViewController else { return }
+        insertSubview(viewController.view, belowSubview: rootViewController.view)
         
         UIView.transition(with: self, duration: 0.4, options: .transitionCrossDissolve, animations: {
             self.rootViewController = viewController
         }) { _ in
-            currentSubviews.forEach({ $0.removeFromSuperview() })
+            currentSubviews.forEach { $0.removeFromSuperview() }
         }
     }
     

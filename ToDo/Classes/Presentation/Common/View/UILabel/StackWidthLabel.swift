@@ -9,7 +9,12 @@
 import UIKit
 
 @IBDesignable
-final class StackWidthLabel: UILabel {
+final class StackWidthLabel: UILabel { }
+
+
+// MARK: - UIView
+
+extension {
     
     override func layoutSubviews() {
         super.layoutSubviews()

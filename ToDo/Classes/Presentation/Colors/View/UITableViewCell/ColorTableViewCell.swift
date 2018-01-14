@@ -26,6 +26,7 @@ final class ColorTableViewCell: UITableViewCell {
 
 extension ColorTableViewCell {
     
+    /// Настройка
     func configure(for color: Color, active: Bool) {
         let color = UIColor(red: CGFloat(color.red) / 255.0, green: CGFloat(color.green) / 255.0, blue: CGFloat(color.blue) / 255.0, alpha: 1)
         self.backgroundImageView.image = .generate(with: color)

@@ -56,6 +56,7 @@ private extension ItemTableViewCell {
 
 extension ItemTableViewCell {
     
+    /// Настройка
     func configure(for item: Item) {
         self.item = item
         
@@ -66,8 +67,9 @@ extension ItemTableViewCell {
         self.descriptionLabel.text = item.description
     }
     
+    /// Обновить состояние
     func updateActive() {
-        self.checkmarkButton.setActive(item.isActive, animated: true)
+        self.checkmarkButton.setActive(self.item.isActive, animated: true)
     }
     
 }

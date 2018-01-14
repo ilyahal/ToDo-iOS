@@ -23,6 +23,7 @@ final class IconTableViewCell: UITableViewCell {
 
 extension IconTableViewCell {
     
+    /// Настройка
     func configure(for icon: Icon, active: Bool) {
         let icon = UIImage(named: "api_\(icon.name)")
         self.iconImageView.image = icon

@@ -10,6 +10,7 @@ import CoreGraphics
 
 extension CGSize {
     
+    /// Равные ширина и высота
     init(square length: CGFloat) {
         self.init(width: length, height: length)
     }
