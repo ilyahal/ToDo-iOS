@@ -14,7 +14,7 @@ final class StackWidthLabel: UILabel { }
 
 // MARK: - UIView
 
-extension {
+extension StackWidthLabel {
     
     override func layoutSubviews() {
         super.layoutSubviews()
