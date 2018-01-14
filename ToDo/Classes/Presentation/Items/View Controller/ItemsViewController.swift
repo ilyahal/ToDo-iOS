@@ -276,6 +276,17 @@ extension ItemsViewController: UITableViewDelegate {
         
         if self.isEditing && indexPath.row == 0 {
             self.tableView(tableView, commit: .insert, forRowAt: indexPath)
+        } else {
+            let item = self.items[indexPath.row - (self.isEditing ? 1 : 0)]
+            if let cell = tableView.cellForRow(at: indexPath) as? ItemTableViewCell {
+                itemTableViewCell(cell, willChange: item)
+                
+                // Тактильный отклик
+                if #available(iOS 10.0, *) {
+                    let feedbackGenerator = UIImpactFeedbackGenerator(style: .light)
+                    feedbackGenerator.impactOccurred()
+                }
+            }
         }
     }
     

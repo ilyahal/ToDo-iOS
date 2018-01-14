@@ -73,9 +73,6 @@ extension RegistrationViewController {
         
         // Подготовка экрана
         setup()
-        
-        // Загрузка данных
-        getData()
     }
     
 }
@@ -125,11 +122,6 @@ private extension RegistrationViewController {
         
         self.emailTextField.keyboardDistanceFromTextField = 140
         self.passwordTextField.keyboardDistanceFromTextField = 80
-    }
-    
-    /// Получить данные
-    func getData() {
-        self.emailTextField.text = self.applicationSettingsService.email
     }
     
     /// Регистрация
