@@ -142,6 +142,7 @@
 		BB9403F22006AEBC00849FE1 /* ItemDetailTableViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9403F12006AEBC00849FE1 /* ItemDetailTableViewControllerDelegate.swift */; };
 		BBB5AD622005824C00C99E86 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5AD612005824C00C99E86 /* LoginViewController.swift */; };
 		BBE632CC2003ED4600DBE28F /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE632CB2003ED4600DBE28F /* APIConstants.swift */; };
+		BBF839582038D620006003B7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BBF839572038D61F006003B7 /* README.md */; };
 		BBFAB3022006B7630077D8AF /* ItemsListRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFAB3012006B7630077D8AF /* ItemsListRequestModel.swift */; };
 		BBFAB3042006B7910077D8AF /* APIModelItems+ListRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFAB3032006B7910077D8AF /* APIModelItems+ListRequestModel.swift */; };
 		BBFAB3072006C74D0077D8AF /* CheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFAB3062006C74D0077D8AF /* CheckboxButton.swift */; };
@@ -286,6 +287,7 @@
 		BB9403F12006AEBC00849FE1 /* ItemDetailTableViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailTableViewControllerDelegate.swift; sourceTree = "<group>"; };
 		BBB5AD612005824C00C99E86 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BBE632CB2003ED4600DBE28F /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		BBF839572038D61F006003B7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BBFAB3012006B7630077D8AF /* ItemsListRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListRequestModel.swift; sourceTree = "<group>"; };
 		BBFAB3032006B7910077D8AF /* APIModelItems+ListRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIModelItems+ListRequestModel.swift"; sourceTree = "<group>"; };
 		BBFAB3062006C74D0077D8AF /* CheckboxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxButton.swift; sourceTree = "<group>"; };
@@ -564,6 +566,7 @@
 		BB840EED2001781000B57E83 = {
 			isa = PBXGroup;
 			children = (
+				BBF839572038D61F006003B7 /* README.md */,
 				BB840EF82001781000B57E83 /* ToDo */,
 				BB840EF72001781000B57E83 /* Products */,
 				BE1209B403390AA110C00521 /* Pods */,
@@ -1267,6 +1270,7 @@
 				BB9403DC20069D3100849FE1 /* Icons.storyboard in Resources */,
 				BB840F042001781000B57E83 /* LaunchScreen.storyboard in Resources */,
 				BB840F012001781000B57E83 /* Assets.xcassets in Resources */,
+				BBF839582038D620006003B7 /* README.md in Resources */,
 				BB8B94872005657A00E3DF6E /* Lists.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
