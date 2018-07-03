@@ -153,7 +153,7 @@ private extension ListDetailTableViewController {
 
 private extension ListDetailTableViewController {
     
-    // Подготовка экрана
+    /// Подготовка экрана
     func setup() {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.doneBarButtonItem.isEnabled = self.list != nil

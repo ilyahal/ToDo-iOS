@@ -6,8 +6,6 @@
 //  Copyright © 2018 Илья Халяпин. All rights reserved.
 //
 
-
-
 import UIKit
 
 final class RegistrationViewController: UIViewController {
